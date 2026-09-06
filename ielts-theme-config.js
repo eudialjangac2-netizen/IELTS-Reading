@@ -2,59 +2,47 @@
    IELTS READING - THEME 4 NÀNG TIÊN 4 MÙA
    =====================================================================
    Mỗi bài (passage) được gán 1 "season" trong JSON (spring/summer/autumn/winter).
-   Theme quyết định: màu chủ đạo của trang, ảnh nàng tiên hiện ở màn login.
+   Theme quyết định: màu chủ đạo của trang + ảnh nàng tiên hiện ở màn login.
 
-   ⚠️ avatarImg hiện đang là PLACEHOLDER (hình khối đơn giản dựng bằng SVG),
-   CHỈ để xem trước layout. Khi bạn gửi ảnh nàng tiên thật (PNG nền trong suốt),
-   chỉ cần thay giá trị avatarImg bằng base64 của ảnh thật — không cần đổi
-   bất kỳ chỗ nào khác trong toàn bộ hệ thống.
+   Ảnh thật nằm trong assets/ (spring.jpg, summer.jpg, autumn.jpg, winter.jpg).
+   Muốn đổi ảnh: chỉ cần thay file trong assets/ (giữ nguyên tên file) —
+   không cần sửa gì trong code.
    ===================================================================== */
-
-function placeholderFairySVG(bgFrom, bgTo, emoji, label) {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="700" viewBox="0 0 500 700">
-      <defs>
-        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="${bgFrom}"/>
-          <stop offset="1" stop-color="${bgTo}"/>
-        </linearGradient>
-      </defs>
-      <ellipse cx="250" cy="620" rx="150" ry="30" fill="black" opacity="0.08"/>
-      <path d="M250 60 C 130 120, 110 350, 160 560 C 200 640, 300 640, 340 560 C 390 350, 370 120, 250 60 Z" fill="url(#g)"/>
-      <circle cx="250" cy="230" r="70" fill="#fff" opacity="0.85"/>
-      <text x="250" y="255" font-size="70" text-anchor="middle">${emoji}</text>
-      <text x="250" y="600" font-size="26" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-weight="700">${label}</text>
-    </svg>
-  `;
-  return "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svg)));
-}
 
 window.IELTS_SEASON_THEMES = {
   spring: {
-    primary: "#4caf7d", primaryLight: "#b7efc5", accent: "#8fd9a8",
-    bgMain: "#f2fbf3", borderColor: "#cdeed8",
+    // spring.jpg: nàng áo cam chơi đàn tỳ bà, hoa mẫu đơn hồng
+    primary: "#c17a1e", primaryLight: "#f0cb8f", accent: "#dba24a",
+    bgMain: "#fdf7ec", borderColor: "#f0e0bd",
     fairyName: "Nàng Tiên Mùa Xuân",
-    avatarImg: placeholderFairySVG("#a7e8bd", "#4caf7d", "🌸", "Mùa Xuân"),
+    avatarImg: "assets/spring.jpg",
   },
   summer: {
-    primary: "#e0a318", primaryLight: "#fbe380", accent: "#f6c94c",
-    bgMain: "#fffaf0", borderColor: "#f3e0a1",
+    // summer.jpg: nàng áo đỏ đội nón lá, cầm hoa sen
+    primary: "#a13347", primaryLight: "#e8a7b4", accent: "#c25a71",
+    bgMain: "#fdf1f2", borderColor: "#f2d4da",
     fairyName: "Nàng Tiên Mùa Hạ",
-    avatarImg: placeholderFairySVG("#ffe08a", "#e0a318", "☀️", "Mùa Hạ"),
+    avatarImg: "assets/summer.jpg",
   },
   autumn: {
-    primary: "#c1682c", primaryLight: "#f3bd8c", accent: "#e08a45",
-    bgMain: "#fff5ec", borderColor: "#f0d3b8",
+    // fall.jpg: nàng áo xanh ngọc cầm quạt, hoa cúc vàng
+    primary: "#2f9e97", primaryLight: "#a6ded9", accent: "#5cc2ba",
+    bgMain: "#f0fbfa", borderColor: "#c3ece8",
     fairyName: "Nàng Tiên Mùa Thu",
-    avatarImg: placeholderFairySVG("#f3c48c", "#c1682c", "🍂", "Mùa Thu"),
+    avatarImg: "assets/autumn.jpg",
   },
   winter: {
-    primary: "#4a90d9", primaryLight: "#bcdcf7", accent: "#7ab6ea",
-    bgMain: "#f0f8ff", borderColor: "#cfe6f7",
+    // winter.jpg: nàng áo tím ôm mèo, hoa nhiệt đới
+    primary: "#6b3ba7", primaryLight: "#d3bce8", accent: "#9268c4",
+    bgMain: "#f6f2fb", borderColor: "#e3d5f0",
     fairyName: "Nàng Tiên Mùa Đông",
-    avatarImg: placeholderFairySVG("#cfe9fb", "#4a90d9", "❄️", "Mùa Đông"),
+    avatarImg: "assets/winter.jpg",
   },
 };
+
+// Màu nền chung của bộ tranh (đo trực tiếp từ ảnh gốc) - dùng cho .login-fairy-pane
+// để nền trang và nền tranh hòa vào nhau, không bị lộ viền khung chữ nhật.
+window.IELTS_ILLUSTRATION_BG = "#e8e2d4";
 
 function getSeasonTheme(season) {
   return window.IELTS_SEASON_THEMES[season] || window.IELTS_SEASON_THEMES.spring;
