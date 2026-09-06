@@ -1,0 +1,84 @@
+{
+  "id": "ielts-sample-01",
+  "topic": "Environment",
+  "season": "spring",
+  "exerciseName": "IELTS Reading - Ocean Plastic Pollution",
+  "webhookUrl": "YOUR_WEBHOOK_URL_HERE",
+
+  "vocabulary": [
+    { "word": "pollution", "meaning": "sự ô nhiễm", "example": "Plastic pollution is a serious problem in the ocean." },
+    { "word": "marine life", "meaning": "sinh vật biển", "example": "Marine life is often harmed by plastic waste." },
+    { "word": "decompose", "meaning": "phân hủy", "example": "Plastic takes hundreds of years to decompose." },
+    { "word": "microplastic", "meaning": "vi nhựa (mảnh nhựa siêu nhỏ)", "example": "Microplastics have been found in fish and even in drinking water." },
+    { "word": "reduce", "meaning": "giảm thiểu", "example": "Many countries are trying to reduce plastic use." },
+    { "word": "consequence", "meaning": "hậu quả", "example": "Ocean pollution has serious consequences for the environment." }
+  ],
+
+  "simplifiedPassage": {
+    "title": "Plastic in the Ocean",
+    "author": "",
+    "paragraphs": [
+      "Plastic pollution is a big problem for the ocean. Every year, people throw away millions of tonnes of plastic, and a lot of it ends up in the sea. Fish, turtles, and birds often eat this plastic by mistake, so it can hurt or kill them.",
+      "Plastic does not decompose quickly, so it stays in the ocean for a very long time. Although some plastic breaks into tiny pieces called microplastics, it does not disappear completely. Scientists have found microplastics in fish, in salt, and even in drinking water.",
+      "Many countries want to reduce plastic pollution, so they are making new laws. For example, some countries have banned plastic bags because they cause a lot of pollution. People can also help by using less plastic and by recycling more.",
+      "Ocean pollution is a serious issue because it affects marine life and it can also affect human health. If people do not act now, the problem will become much worse in the future."
+    ]
+  },
+  "simplifiedQuestions": {
+    "type": "tfng",
+    "instructions": "Đọc đoạn văn rút gọn bên trái và cho biết mỗi câu sau là TRUE, FALSE, hay NOT GIVEN.",
+    "items": [
+      { "id": 1, "statement": "Sea animals sometimes eat plastic by accident.", "answer": "TRUE",
+        "hint": "💡 Đọc lại câu 'Fish, turtles, and birds often eat this plastic by mistake'." },
+      { "id": 2, "statement": "Plastic disappears completely after it breaks into microplastics.", "answer": "FALSE",
+        "hint": "💡 Bài viết nói 'it does not disappear completely' — vậy câu này đúng hay sai?" },
+      { "id": 3, "statement": "Every country in the world has banned plastic bags.", "answer": "NOT GIVEN",
+        "hint": "💡 Bài chỉ nói 'some countries' — không nói TẤT CẢ các nước." },
+      { "id": 4, "statement": "Scientists have found microplastics in drinking water.", "answer": "TRUE",
+        "hint": "💡 Đọc lại câu về nơi các nhà khoa học tìm thấy vi nhựa." }
+    ]
+  },
+
+  "originalPassage": {
+    "title": "The Global Crisis of Ocean Plastic Pollution",
+    "author": "",
+    "paragraphs": [
+      "Plastic pollution has emerged as one of the most pressing environmental challenges of the twenty-first century. It is estimated that more than eight million tonnes of plastic waste enter the world's oceans annually, much of it originating from land-based sources such as improperly managed waste and industrial run-off. Once in the marine environment, plastic debris can persist for centuries, gradually breaking down into smaller fragments known as microplastics rather than fully decomposing.",
+      "The ecological consequences of this pollution are far-reaching. Marine species, ranging from plankton to large cetaceans, frequently ingest plastic debris, mistaking it for food. This can result in internal injury, malnutrition, and, in severe cases, death. Furthermore, because microplastics are now pervasive throughout marine food webs, they have been detected not only in fish and shellfish destined for human consumption but also in table salt and bottled water, raising concerns about long-term effects on human health that remain only partially understood.",
+      "In response to mounting scientific evidence, a number of governments have introduced legislation aimed at curbing single-use plastics, including bans on plastic bags, straws, and certain types of packaging. While such measures represent an important first step, experts argue that a more comprehensive approach is required, one that addresses plastic production at its source, improves waste management infrastructure in developing regions, and fosters international cooperation, given that ocean currents transport debris well beyond national boundaries.",
+      "Ultimately, tackling ocean plastic pollution will require coordinated action from governments, industry, and individual consumers alike. Without such a concerted effort, projections suggest that the volume of plastic entering the ocean could nearly triple within the next two decades, with consequences for marine ecosystems and human wellbeing that would be difficult, if not impossible, to reverse."
+    ]
+  },
+  "originalQuestions": {
+    "type": "tfng",
+    "instructions": "Đọc đoạn văn gốc bên trái và cho biết mỗi câu sau là TRUE, FALSE, hay NOT GIVEN.",
+    "items": [
+      { "id": 5, "statement": "Most ocean plastic comes from sources based on land rather than from ships.", "answer": "TRUE",
+        "hint": "💡 'much of it originating from land-based sources'." },
+      { "id": 6, "statement": "Plastic debris in the ocean fully decomposes within a few decades.", "answer": "FALSE",
+        "hint": "💡 Bài nói plastic 'persist for centuries' và chỉ vỡ thành mảnh nhỏ chứ không phân hủy hoàn toàn." },
+      { "id": 7, "statement": "Scientists fully understand the long-term health effects of microplastics on humans.", "answer": "FALSE",
+        "hint": "💡 Đọc kỹ cụm 'remain only partially understood'." },
+      { "id": 8, "statement": "All countries have banned single-use plastic packaging.", "answer": "NOT GIVEN",
+        "hint": "💡 Bài chỉ nói 'a number of governments', không nói tất cả các nước." },
+      { "id": 9, "statement": "Experts believe banning plastic bags alone is enough to solve the problem.", "answer": "FALSE",
+        "hint": "💡 'experts argue that a more comprehensive approach is required' — nghĩa là chưa đủ." }
+    ]
+  },
+
+  "explanation": {
+    "simplified": [
+      { "q": 1, "ans": "TRUE", "key": "Bài viết nói rõ 'Fish, turtles, and birds often eat this plastic by mistake' — cá và các sinh vật biển vô tình ăn phải nhựa." },
+      { "q": 2, "ans": "FALSE", "key": "Bài viết nói 'it does not disappear completely' — vi nhựa KHÔNG biến mất hoàn toàn, nên câu hỏi (nói ngược lại) là SAI." },
+      { "q": 3, "ans": "NOT GIVEN", "key": "Bài chỉ nói 'some countries have banned plastic bags', không có thông tin về TẤT CẢ các nước trên thế giới." },
+      { "q": 4, "ans": "TRUE", "key": "Bài viết nói rõ các nhà khoa học tìm thấy vi nhựa 'in fish, in salt, and even in drinking water'." }
+    ],
+    "original": [
+      { "q": 5, "ans": "TRUE", "key": "'much of it originating from land-based sources' cho thấy phần lớn nhựa đến từ đất liền, không phải từ tàu thuyền." },
+      { "q": 6, "ans": "FALSE", "key": "Bài nói nhựa 'persist for centuries' và chỉ 'gradually breaking down into smaller fragments' chứ không phân hủy hoàn toàn." },
+      { "q": 7, "ans": "FALSE", "key": "Cụm 'remain only partially understood' cho thấy các nhà khoa học CHƯA hiểu đầy đủ về tác động sức khỏe lâu dài." },
+      { "q": 8, "ans": "NOT GIVEN", "key": "Bài chỉ nói 'a number of governments' (một số chính phủ), không đề cập TẤT CẢ các nước." },
+      { "q": 9, "ans": "FALSE", "key": "Các chuyên gia cho rằng cần 'a more comprehensive approach', nghĩa là chỉ cấm túi nhựa thôi là CHƯA đủ." }
+    ]
+  }
+}
