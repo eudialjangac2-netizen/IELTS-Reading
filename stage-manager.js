@@ -62,6 +62,22 @@
 
     // Đợi học sinh login xong (PETEngine sẽ gọi hàm này qua window.onIELTSLoginSuccess)
     window.onIELTSLoginSuccess = function () {
+      // Khởi động engine NGAY sau khi login (dù tầng đầu tiên là Vocab hay câu hỏi),
+      // để anti-copy/đếm chuyển tab/highlight hoạt động xuyên suốt cả bài,
+      // kể cả trong lúc học từ vựng (chưa có câu hỏi để chấm).
+      PETEngine.init({
+        exerciseName: examData.exerciseName,
+        webhookUrl: examData.webhookUrl,
+        topic: examData.topic,
+        stage: "intro",
+        isFinalStage: false,
+        questionIds: [],
+        getSelectedAnswer: () => "",
+        setAnswerValue: () => {},
+        getCorrectAnswer: () => "",
+        clearAllAnswers: () => {},
+      });
+
       currentStageIndex = -1;
       goToNextStage();
     };
@@ -180,14 +196,9 @@
         onStageComplete: goToNextStage,
       });
 
-      // Lần đầu tiên PETEngine xử lý câu hỏi trong phiên làm bài này -> gọi init().
-      // Các lần sau (chuyển tầng) -> gọi startNewStage() để không mất tabSwitchCount/login.
-      if (!window.__ieltsEngineInitialized) {
-        window.__ieltsEngineInitialized = true;
-        PETEngine.init(fullCfg);
-      } else {
-        PETEngine.startNewStage(fullCfg);
-      }
+      // PETEngine.init() đã chạy ngay sau khi login (xem onIELTSLoginSuccess),
+      // nên từ tầng câu hỏi đầu tiên trở đi luôn dùng startNewStage().
+      PETEngine.startNewStage(fullCfg);
     } else {
       target.innerHTML = `<p style="padding:24px;">⚠️ Chưa hỗ trợ dạng câu hỏi "${questionsBlock.type}".</p>`;
     }
