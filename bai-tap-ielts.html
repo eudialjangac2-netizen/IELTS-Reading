@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Reading</title>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared-styles.css">
+<link rel="stylesheet" href="ielts-extra-styles.css">
+</head>
+<body>
+
+  <div id="watermark"></div>
+
+  <!-- Teacher Admin Bar -->
+  <div id="teacherToolbar">
+    <div><strong>TEACHER MODE ACTIVE</strong> (<span id="teacherNameLabel"></span>)</div>
+    <div>
+      <button onclick="PETEngine.teacherAutoFill(true)">Auto-Fill Đúng</button>
+      <button onclick="PETEngine.teacherAutoFill(false)">Auto-Fill Sai</button>
+      <button onclick="PETEngine.toggleAntiCheat()">Bypass Anti-Cheat/Spam</button>
+    </div>
+  </div>
+
+  <!-- Login Screen: Nàng tiên bên trái (chảy vào nền, không viền) - Form bên phải -->
+  <div id="loginScreen" class="login-screen-v2">
+    <div class="login-fairy-pane">
+      <img id="loginFairyImg" src="" alt="Nàng tiên">
+    </div>
+    <div class="login-form-pane">
+      <div class="login-card login-card-v2">
+        <div id="fairyNameLabel" class="fairy-name-label"></div>
+        <h2>Đăng Nhập Làm Bài</h2>
+        <p id="loginSubtitle">Vui lòng nhập đầy đủ thông tin để bắt đầu bài tập</p>
+
+        <div class="form-group">
+          <label for="studentName">Họ và Tên học sinh *</label>
+          <input type="text" id="studentName" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <label for="accessCode">Mã xác nhận bài tập *</label>
+          <input type="text" id="accessCode" autocomplete="off">
+        </div>
+
+        <button class="btn-start" onclick="PETEngine.startExercise()">Bắt Đầu Làm Bài</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Highlight Popup -->
+  <div id="hlPopup">
+    <span class="hl-title">Tô màu:</span>
+    <div class="hl-btn hl-yellow" title="Vàng" onclick="PETEngine.applyHighlight('yellow')"></div>
+    <div class="hl-btn hl-green" title="Xanh lá" onclick="PETEngine.applyHighlight('green')"></div>
+    <div class="hl-btn hl-blue" title="Xanh dương" onclick="PETEngine.applyHighlight('blue')"></div>
+    <div class="hl-btn hl-remove" title="Xóa" onclick="PETEngine.applyHighlight('remove')"></div>
+  </div>
+
+  <!-- Retry Modal -->
+  <div id="modalOverlay">
+    <div class="modal-box">
+      <div style="font-size: 48px; margin-bottom: 8px;">🔄</div>
+      <h3 style="color: var(--primary); font-size: 22px; margin-bottom: 8px;">CẦN LÀM LẠI BÀI TẬP</h3>
+      <p style="font-size: 15px; color: #4a5568; line-height: 1.5;" id="modalDesc">Bạn chưa đạt 100%. Hãy thử lại nhé!</p>
+      <button class="btn-start" style="margin-top: 20px;" onclick="PETEngine.closeModal()">Thử Làm Lại 🔄</button>
+    </div>
+  </div>
+
+  <!-- Main App Window -->
+  <div id="mainApp">
+    <div class="app-header">
+      <h1 id="appTitle">IELTS Reading</h1>
+      <div class="header-right-group">
+        <div class="stats-badge" id="tabBadge">Chuyển tab: 0 lần</div>
+        <div class="highlight-toolbar">
+          <span class="hl-title">Highlight bài đọc:</span>
+          <div class="hl-btn hl-yellow" title="Vàng" onclick="PETEngine.applyHighlight('yellow')"></div>
+          <div class="hl-btn hl-green" title="Xanh lá" onclick="PETEngine.applyHighlight('green')"></div>
+          <div class="hl-btn hl-blue" title="Xanh dương" onclick="PETEngine.applyHighlight('blue')"></div>
+          <div class="hl-btn hl-remove" title="Xóa Highlight" onclick="PETEngine.applyHighlight('remove')"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage Manager sẽ chèn #stageProgress ngay sau .app-header -->
+
+    <!-- Stage Manager đổ nội dung từng tầng vào đây -->
+    <div id="partRenderTarget"></div>
+
+    <div class="submit-footer">
+      <div style="font-size:14px; color:var(--text-muted);" id="statusText">Hoàn thành các câu hỏi để nộp bài</div>
+      <div class="duplicate-tooltip" id="dupTooltip">⚠️ Không được chọn trùng đáp án giữa các câu!</div>
+      <button class="btn-submit" id="btnSubmit" onclick="PETEngine.checkAnswers()" disabled>Kiểm Tra Đáp Án 🚀</button>
+    </div>
+  </div>
+
+  <!-- Anti-Spam Overlay -->
+  <div id="lockOverlay">
+    <div class="modal-box">
+      <h3 style="color:#e53e3e; font-size:22px; margin-bottom:10px;" id="lockTitle">⚠️ CẢNH BÁO THAO TÁC QUÁ NHANH</h3>
+      <p style="font-size:15px; color:#4a5568;">Bạn đã thao tác quá nhanh.</p>
+      <div style="font-size:48px; font-weight:700; color:#e53e3e; margin:16px 0;" id="lockTimer">5</div>
+      <p style="font-size:13px; color:#718096;">Màn hình sẽ tự động khóa trong thời gian quy định.</p>
+    </div>
+  </div>
+
+  <!-- Result Modal (dùng chung cho cả 3 tầng, nút Continue tự đổi hành vi) -->
+  <div id="resultModal">
+    <div class="result-card">
+      <div style="text-align:center; margin-bottom:24px;">
+        <div style="font-size:60px;">🎉</div>
+        <h2 style="color:var(--primary); font-size:28px;">HOÀN THÀNH XUẤT SẮC!</h2>
+        <p style="color:var(--text-muted); font-size:15px; margin-top:6px;">Kết quả tầng này đã được ghi nhận.</p>
+      </div>
+      <div class="result-summary-grid" id="resultSummaryBox"></div>
+      <h3 style="color:var(--primary); font-size:18px; margin-bottom:12px;">Giải Thích Đáp Án Chi Tiết:</h3>
+      <div id="explanationContainer"></div>
+      <button class="btn-start" style="margin-top:24px;" id="btnResultContinue" onclick="PETEngine.handleResultContinue()">Tiếp Tục ➜</button>
+    </div>
+  </div>
+
+  <!-- Theme (Nàng Tiên 4 Mùa) + Engine + Renderer + Stage Manager -->
+  <script src="ielts-theme-config.js"></script>
+  <script src="shared-engine-ielts.js"></script>
+  <script src="renderers/tfng.js"></script>
+  <script src="stage-manager.js"></script>
+
+</body>
+</html>

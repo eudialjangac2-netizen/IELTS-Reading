@@ -1,0 +1,95 @@
+/* =====================================================================
+   IELTS READING - CSS BỔ SUNG (chỉ thêm phần mà shared-styles.css của PET
+   chưa có: thanh tiến trình 3 tầng, thẻ từ vựng, style riêng cho TFNG)
+   ===================================================================== */
+
+/* ---------- Màn Login v2: Nàng tiên trái (chảy vào nền, không viền) - Form phải ---------- */
+.login-screen-v2 {
+  display: flex; min-height: 100vh; padding: 0; background: none;
+}
+.login-fairy-pane {
+  flex: 1.15; position: relative; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 100%, var(--bg-main) 0%, #ffffff 70%);
+  display: flex; align-items: flex-end; justify-content: center;
+  padding-top: 40px;
+}
+.login-fairy-pane img {
+  width: 100%; max-width: 560px; height: auto; object-fit: contain;
+  filter: drop-shadow(0 25px 35px rgba(0,0,0,0.12));
+}
+.login-form-pane {
+  flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 32px;
+  background: #ffffff;
+}
+.login-card-v2 {
+  box-shadow: none; border: none; padding: 0; max-width: 380px;
+}
+.fairy-name-label {
+  display: inline-block; font-size: 12.5px; font-weight: 700; color: var(--primary);
+  background: var(--bg-main); border: 1px solid var(--border-color);
+  padding: 5px 14px; border-radius: 20px; margin-bottom: 14px;
+}
+
+@media (max-width: 860px) {
+  .login-screen-v2 { flex-direction: column; }
+  .login-fairy-pane { flex: none; min-height: 260px; padding-top: 20px; }
+  .login-fairy-pane img { max-width: 260px; }
+  .login-form-pane { padding: 28px 24px 48px; }
+}
+
+/* ---------- Thanh tiến trình 3 tầng (dưới app-header) ---------- */
+.stage-progress {
+  display: flex; align-items: center; justify-content: center; gap: 0;
+  background: var(--bg-card); padding: 10px 16px; border-bottom: 2px solid var(--border-color);
+}
+.stage-step {
+  display: flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 20px;
+  font-size: 13px; font-weight: 700; color: var(--text-muted); background: rgba(0,0,0,0.03);
+}
+.stage-step.active { background: var(--primary); color: #fff; }
+.stage-step.done { background: rgba(0,0,0,0.03); color: var(--primary); }
+.stage-step .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.stage-arrow { color: var(--border-color); font-size: 16px; margin: 0 4px; }
+
+/* ---------- Tầng Từ Vựng (vocab) ---------- */
+.vocab-intro {
+  max-width: 760px; margin: 0 auto; padding: 24px 16px 100px;
+}
+.vocab-intro h2 { color: var(--primary); font-size: 20px; margin-bottom: 6px; }
+.vocab-intro p.vocab-sub { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; }
+
+.vocab-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px;
+}
+.vocab-card {
+  background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 18px;
+  padding: 16px; cursor: pointer; min-height: 110px; display: flex; flex-direction: column;
+  justify-content: center; transition: border-color 0.15s;
+}
+.vocab-card:hover { border-color: var(--primary); }
+.vocab-card .vw-word { font-weight: 800; font-size: 17px; color: var(--primary); }
+.vocab-card .vw-meaning {
+  margin-top: 8px; font-size: 14px; color: var(--text-dark); display: none;
+}
+.vocab-card .vw-example {
+  margin-top: 6px; font-size: 12.5px; color: var(--text-muted); font-style: italic; display: none;
+}
+.vocab-card.flipped .vw-meaning, .vocab-card.flipped .vw-example { display: block; }
+.vocab-card .vw-hint { margin-top: 6px; font-size: 11.5px; color: #b0a888; }
+
+.btn-continue-vocab {
+  display: block; margin: 28px auto 0; padding: 14px 40px;
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+  color: #fff; border: none; border-radius: 20px; font-size: 15px; font-weight: 700; cursor: pointer;
+}
+
+/* ---------- Nút TFNG dạng pill ngang thay vì list dọc ---------- */
+.tfng-options { flex-direction: row !important; flex-wrap: wrap; }
+.tfng-option-label {
+  flex: 1; min-width: 100px; justify-content: center; text-align: center;
+  font-weight: 700; font-size: 13px;
+}
+.tfng-option-label input { display: none; }
+.tfng-option-label:has(input:checked) {
+  background: var(--primary); color: #fff; border-color: var(--primary);
+}
