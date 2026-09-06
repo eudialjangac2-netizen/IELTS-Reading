@@ -9,13 +9,18 @@
 }
 .login-fairy-pane {
   flex: 1.15; position: relative; overflow: hidden;
-  background: radial-gradient(ellipse at 50% 100%, var(--bg-main) 0%, #ffffff 70%);
-  display: flex; align-items: flex-end; justify-content: center;
-  padding-top: 40px;
+  background-color: #e8e2d4; /* màu kem đo trực tiếp từ tranh minh hoạ, để 2 nền hoà vào nhau */
+  display: flex; align-items: center; justify-content: center;
 }
 .login-fairy-pane img {
-  width: 100%; max-width: 560px; height: auto; object-fit: contain;
-  filter: drop-shadow(0 25px 35px rgba(0,0,0,0.12));
+  width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+  display: block;
+}
+.login-fairy-pane::after {
+  /* Dải mờ dần bên phải để ảnh "tan" vào nền trắng của form thay vì cắt cứng */
+  content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 120px;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, #ffffff 100%);
+  pointer-events: none;
 }
 .login-form-pane {
   flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 32px;
@@ -32,9 +37,12 @@
 
 @media (max-width: 860px) {
   .login-screen-v2 { flex-direction: column; }
-  .login-fairy-pane { flex: none; min-height: 260px; padding-top: 20px; }
-  .login-fairy-pane img { max-width: 260px; }
-  .login-form-pane { padding: 28px 24px 48px; }
+  .login-fairy-pane { flex: none; height: 42vh; }
+  .login-fairy-pane::after {
+    top: auto; left: 0; right: 0; bottom: 0; width: auto; height: 80px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%);
+  }
+  .login-form-pane { padding: 20px 24px 48px; }
 }
 
 /* ---------- Thanh tiến trình 3 tầng (dưới app-header) ---------- */
