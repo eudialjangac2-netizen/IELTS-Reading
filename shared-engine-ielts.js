@@ -45,6 +45,14 @@
   let antiCheatBypassed = false;
   let currentSelectionRange = null;
 
+  // Mã đăng nhập KHÔNG phụ thuộc vào cfg, vì màn login xảy ra TRƯỚC khi
+  // PETEngine.init() được gọi lần đầu (init chỉ chạy ở tầng câu hỏi đầu tiên,
+  // sau khi đăng nhập xong). Nếu cfg đã có giá trị (do init() lỡ chạy trước),
+  // vẫn ưu tiên cfg để tương thích ngược.
+  const DEFAULT_STUDENT_CODE = "IERB";
+  const DEFAULT_TEACHER_NAME = "GVIERB";
+  const DEFAULT_TEACHER_CODE = "IE9.0";
+
   // ---------------------------------------------------------------------
   // INIT (gọi 1 lần duy nhất cho tầng ĐẦU TIÊN của bài)
   // ---------------------------------------------------------------------
@@ -155,12 +163,16 @@
     const codeInput = (document.getElementById("accessCode").value || "").trim();
     if (!nameInput) { alert("Vui lòng nhập Họ và Tên!"); return; }
 
-    if (nameInput === cfg.teacherName && codeInput === cfg.teacherCode) {
+    const studentCode = (cfg && cfg.studentCode) || DEFAULT_STUDENT_CODE;
+    const teacherName = (cfg && cfg.teacherName) || DEFAULT_TEACHER_NAME;
+    const teacherCode = (cfg && cfg.teacherCode) || DEFAULT_TEACHER_CODE;
+
+    if (nameInput === teacherName && codeInput === teacherCode) {
       isTeacher = true;
       antiCheatBypassed = true;
       const toolbar = document.getElementById("teacherToolbar");
       if (toolbar) toolbar.style.display = "flex";
-    } else if (codeInput !== cfg.studentCode) {
+    } else if (codeInput !== studentCode) {
       alert("Mã xác nhận bài tập không đúng!");
       return;
     }
