@@ -939,11 +939,11 @@
   "grammarTools": [
     {
       "title": "Grammar Tool 1: Concession clauses (although / despite)",
-      "staticIntroHTML": "<p><b>Step 1: Look at the passage</b></p><p><i>“Despite the Egyptian fleet's best efforts, the pirates continued to cause substantial disruption to regional commerce.”</i></p><p><i>“Although piracy was a serious issue for the Republic, Rome profited greatly from its existence.”</i></p><p><b>Step 2: Notice</b></p><p>What does 'although / despite' tell the reader? → the second part of the sentence is surprising, or opposite to what we would expect.</p>",
+      "staticIntroHTML": "<p><b>Step 1: Look at the passage</b></p><p class='vi-text'>Bước 1: Nhìn vào bài đọc</p><p><i>“Despite the Egyptian fleet's best efforts, the pirates continued to cause substantial disruption to regional commerce.”</i></p><p class='vi-text'>Dù hạm đội Ai Cập đã cố gắng hết sức, cướp biển vẫn tiếp tục gây xáo trộn lớn cho thương mại khu vực.</p><p><i>“Although piracy was a serious issue for the Republic, Rome profited greatly from its existence.”</i></p><p class='vi-text'>Mặc dù cướp biển là vấn đề nghiêm trọng với nền Cộng hòa, La Mã vẫn hưởng lợi lớn từ sự tồn tại của nó.</p><p><b>Step 2: Notice</b></p><p class='vi-text'>Bước 2: Nhận xét</p><p>What does 'although / despite' tell the reader? → the second part of the sentence is surprising, or opposite to what we would expect.</p><p class='vi-text'>'Although / despite' cho người đọc biết điều gì? → vế sau của câu là điều bất ngờ, hoặc trái ngược với điều ta mong đợi.</p>",
       "patternExercise": {
         "type": "fillblank",
         "title": "Step 3: Discover the pattern",
-        "instructions": "Complete the sentence.",
+        "instructions": "Complete the sentence. / Điền vào chỗ trống.",
         "items": [
           {
             "id": "g1_p1",
@@ -955,11 +955,11 @@
           }
         ]
       },
-      "staticReadingToolHTML": "<p><b>Step 4: Use it as a READING TOOL</b></p><p>When you see 'although' or 'despite', expect two opposite ideas. The MAIN message is usually the part after the comma.</p><p>Example: “Although piracy was a serious issue for the Republic, Rome profited greatly from its existence.”</p><p><b>Core meaning: Rome profited from piracy.</b></p>",
+      "staticReadingToolHTML": "<p><b>Step 4: Use it as a READING TOOL</b></p><p class='vi-text'>Bước 4: Dùng làm công cụ đọc hiểu</p><p>When you see 'although' or 'despite', expect two opposite ideas. The MAIN message is usually the part after the comma.</p><p class='vi-text'>Khi thấy 'although' hoặc 'despite', hãy chờ đợi 2 ý trái ngược nhau. Ý CHÍNH thường nằm ở phần sau dấu phẩy.</p><p>Example: “Although piracy was a serious issue for the Republic, Rome profited greatly from its existence.”</p><p class='vi-text'>Ví dụ: 'Mặc dù cướp biển là vấn đề nghiêm trọng với nền Cộng hòa, La Mã vẫn hưởng lợi lớn từ sự tồn tại của nó.'</p><p><b>Core meaning: Rome profited from piracy.</b></p><p class='vi-text'>Ý cốt lõi: La Mã đã hưởng lợi từ nạn cướp biển.</p>",
       "applyExercise": {
         "type": "mcq",
         "title": "Exercise: Apply",
-        "instructions": "Choose the correct meaning.",
+        "instructions": "Choose the correct meaning. / Chọn nghĩa đúng.",
         "items": [
           {
             "id": "g1_e1",
@@ -1005,15 +1005,15 @@
           }
         ]
       },
-      "staticReturnHTML": "<p><b>Step 5: Return to the IELTS task</b></p><p>Passage idea: “Despite the Egyptian fleet's best efforts, the pirates continued to cause substantial disruption.”</p><p>Question idea: The Egyptian fleet successfully stopped the pirates.</p><p><b>The meanings are opposite → FALSE.</b></p>"
+      "staticReturnHTML": "<p><b>Step 5: Return to the IELTS task</b></p><p class='vi-text'>Bước 5: Quay lại vận dụng vào đề</p><p>Passage idea: “Despite the Egyptian fleet's best efforts, the pirates continued to cause substantial disruption.”</p><p class='vi-text'>Ý trong bài: 'Dù hạm đội Ai Cập đã cố gắng hết sức, cướp biển vẫn tiếp tục gây xáo trộn lớn.'</p><p>Question idea: The Egyptian fleet successfully stopped the pirates.</p><p class='vi-text'>Ý trong câu hỏi: Hạm đội Ai Cập đã ngăn chặn thành công cướp biển.</p><p><b>The meanings are opposite → FALSE.</b></p><p class='vi-text'>Hai ý trái ngược nhau → FALSE.</p>"
     },
     {
       "title": "Grammar Tool 2: Participle clauses",
-      "staticIntroHTML": "<p><b>Step 1: Look at the passage</b></p><p><i>“Caught in a trap, a slow merchant ship had no other option but to surrender.”</i></p><p><i>“Taking personal command, Pompey divided the entire Mediterranean into 13 districts.”</i></p><p><i>“Emboldened pirates kidnapped prominent Roman dignitaries.”</i></p><p><b>Step 2: Notice</b></p><p>Who/what is 'caught in a trap'? → the merchant ship (something HAPPENED TO it). Who 'took personal command'? → Pompey (HE performed the action).</p>",
+      "staticIntroHTML": "<p><b>Step 1: Look at the passage</b></p><p class='vi-text'>Bước 1: Nhìn vào bài đọc</p><p><i>“Caught in a trap, a slow merchant ship had no other option but to surrender.”</i></p><p class='vi-text'>Bị mắc bẫy, con tàu buôn chậm chạp không còn lựa chọn nào khác ngoài đầu hàng.</p><p><i>“Taking personal command, Pompey divided the entire Mediterranean into 13 districts.”</i></p><p class='vi-text'>Tự mình chỉ huy, Pompey chia toàn bộ Địa Trung Hải thành 13 khu vực.</p><p><i>“Emboldened pirates kidnapped prominent Roman dignitaries.”</i></p><p class='vi-text'>Được tiếp thêm sự táo bạo, cướp biển đã bắt cóc các quan chức La Mã cấp cao.</p><p><b>Step 2: Notice</b></p><p class='vi-text'>Bước 2: Nhận xét</p><p>Who/what is 'caught in a trap'? → the merchant ship (something HAPPENED TO it). Who 'took personal command'? → Pompey (HE performed the action).</p><p class='vi-text'>Ai/cái gì 'bị mắc bẫy'? → con tàu buôn (một việc XẢY RA VỚI nó). Ai 'tự mình chỉ huy'? → Pompey (CHÍNH ÔNG thực hiện hành động).</p>",
       "patternExercise": {
         "type": "fillblank",
         "title": "Step 3: Discover the pattern",
-        "instructions": "Complete the sentence.",
+        "instructions": "Complete the sentence. / Điền vào chỗ trống.",
         "items": [
           {
             "id": "g2_p1",
@@ -1024,11 +1024,11 @@
           }
         ]
       },
-      "staticReadingToolHTML": "<p><b>Step 4: Use it as a READING TOOL</b></p><p>Expand the participle clause into a full clause to understand the meaning clearly.</p><p>Example: “Caught in a trap, a slow merchant ship had no other option but to surrender.”</p><p><b>Expanded: Because the merchant ship was caught in a trap, it had no other option but to surrender.</b></p>",
+      "staticReadingToolHTML": "<p><b>Step 4: Use it as a READING TOOL</b></p><p class='vi-text'>Bước 4: Dùng làm công cụ đọc hiểu</p><p>Expand the participle clause into a full clause to understand the meaning clearly.</p><p class='vi-text'>Mở rộng mệnh đề rút gọn thành mệnh đề đầy đủ để hiểu rõ nghĩa.</p><p>Example: “Caught in a trap, a slow merchant ship had no other option but to surrender.”</p><p class='vi-text'>Ví dụ: 'Bị mắc bẫy, con tàu buôn chậm chạp không còn lựa chọn nào khác ngoài đầu hàng.'</p><p><b>Expanded: Because the merchant ship was caught in a trap, it had no other option but to surrender.</b></p><p class='vi-text'>Mở rộng: Vì con tàu buôn bị mắc bẫy, nó không còn lựa chọn nào khác ngoài đầu hàng.</p>",
       "applyExercise": {
         "type": "mcq",
         "title": "Exercise: Apply",
-        "instructions": "Choose the correct meaning.",
+        "instructions": "Choose the correct meaning. / Chọn nghĩa đúng.",
         "items": [
           {
             "id": "g2_e1",
@@ -1078,7 +1078,7 @@
           }
         ]
       },
-      "staticReturnHTML": "<p><b>Step 5: Return to the IELTS task</b></p><p>Passage idea: “Taking personal command, Pompey divided the entire Mediterranean into 13 districts, assigning a fleet and commander to each.”</p><p>This sentence explains exactly HOW Pompey carried out his campaign — useful for a question about 'details of how a campaign to eradicate piracy was carried out'.</p>"
+      "staticReturnHTML": "<p><b>Step 5: Return to the IELTS task</b></p><p class='vi-text'>Bước 5: Quay lại vận dụng vào đề</p><p>Passage idea: “Taking personal command, Pompey divided the entire Mediterranean into 13 districts, assigning a fleet and commander to each.”</p><p class='vi-text'>Ý trong bài: 'Tự mình chỉ huy, Pompey chia toàn bộ Địa Trung Hải thành 13 khu vực, mỗi khu vực có 1 hạm đội và 1 chỉ huy riêng.'</p><p>This sentence explains exactly HOW Pompey carried out his campaign — useful for a question about 'details of how a campaign to eradicate piracy was carried out'.</p><p class='vi-text'>Câu này giải thích chính xác Pompey đã thực hiện chiến dịch NHƯ THẾ NÀO — hữu ích cho câu hỏi về 'chi tiết cách chiến dịch xóa sổ cướp biển được thực hiện'.</p>"
     }
   ],
   "explanation": {
