@@ -34,6 +34,10 @@
 .grammar-static-block { font-size: 14.5px; line-height: 1.7; margin-bottom: 14px; }
 .grammar-static-block p { margin-bottom: 10px; }
 .grammar-static-block i { color: #4a5568; }
+.para-label-badge {
+  display: inline-block; background: var(--primary); color: #fff; font-weight: 800;
+  padding: 1px 9px; border-radius: 6px; margin-right: 8px; font-size: 13px;
+}
 
 /* ---------- Ghi đè footer: statusText có thể dài (vd "Đã làm 12/17 câu...")
    -> cho phép xuống dòng gọn thay vì đẩy tràn/che khuất nội dung phía trên ---------- */
@@ -66,8 +70,9 @@
 }
 .login-fairy-pane img {
   width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
-  display: block;
+  display: block; opacity: 0; transition: opacity 0.25s;
 }
+.login-fairy-pane img[src]:not([src=""]) { opacity: 1; }
 .login-fairy-pane::after {
   /* Dải mờ dần bên phải để ảnh "tan" vào nền trắng của form thay vì cắt cứng */
   content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 120px;
@@ -97,6 +102,25 @@
   .login-form-pane { padding: 20px 24px 48px; }
 }
 
+/* =====================================================================
+   IELTS READING - CSS BỔ SUNG
+   =====================================================================
+   Ghi đè màu mặc định của shared-styles.css (vốn là bảng màu "Lemon Rabbit"
+   của PET Part 1) bằng màu trung tính. Lý do: trang này load shared-styles.css
+   trước, rồi JS mới đổi màu theo mùa SAU KHI fetch xong JSON — nên nếu không
+   ghi đè ở đây, người dùng sẽ thấy nháy màu vàng Lemon Rabbit trong lúc chờ.
+   ===================================================================== */
+:root {
+  --bg-main: #f7f6f3;
+  --bg-card: #ffffff;
+  --primary: #6b6558;
+  --primary-light: #d9d5cb;
+  --accent: #9c9587;
+  --text-dark: #3a3733;
+  --text-muted: #82785c;
+  --border-color: #e5e0d5;
+}
+
 /* ---------- Thanh tiến trình 3-5 tầng (dưới app-header) ---------- */
 .stage-progress {
   display: flex; align-items: center; justify-content: center; gap: 0;
@@ -106,8 +130,9 @@
 .stage-step {
   display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 20px;
   font-size: 12.5px; font-weight: 700; color: var(--text-muted); background: rgba(0,0,0,0.03);
-  flex-shrink: 0;
+  flex-shrink: 0; cursor: pointer; transition: background 0.15s;
 }
+.stage-step:hover { background: rgba(0,0,0,0.07); }
 .stage-step.active { background: var(--primary); color: #fff; }
 .stage-step.done { background: rgba(0,0,0,0.03); color: var(--primary); }
 .stage-step .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
