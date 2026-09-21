@@ -17,6 +17,7 @@ window.ExerciseCombinator = (function () {
     matching: window.MatchingRenderer,
     fillblank: window.FillBlankRenderer,
     mcq: window.MCQRenderer,
+    "mcq-multi": window.MCQMultiRenderer,
   };
 
   // Block "static": chỉ render HTML thuyết minh, không đóng góp câu hỏi nào.
