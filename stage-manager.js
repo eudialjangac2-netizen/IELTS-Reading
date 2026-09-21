@@ -36,8 +36,10 @@
     // Xây danh sách tầng dựa theo mode + dữ liệu có sẵn trong JSON
     stageList = [];
     if (examData.vocabulary && examData.vocabulary.length > 0) stageList.push("vocab");
+    if (examData.vocabularyExercises && examData.vocabularyExercises.length > 0) stageList.push("vocab-exercises");
     if (mode === "scaffold" && examData.simplifiedPassage) stageList.push("simplified");
     if (examData.originalPassage) stageList.push("original");
+    if (examData.grammarTools && examData.grammarTools.length > 0) stageList.push("grammar");
 
     document.getElementById("appTitle").textContent = "📖 " + examData.exerciseName;
     const loginSubtitle = document.getElementById("loginSubtitle");
@@ -107,10 +109,14 @@
 
     if (stageName === "vocab") {
       renderVocabStage();
+    } else if (stageName === "vocab-exercises") {
+      renderVocabExercisesStage();
     } else if (stageName === "simplified") {
       renderQuestionStage("simplified", examData.simplifiedPassage, examData.simplifiedQuestions, "Bài Đọc Rút Gọn");
     } else if (stageName === "original") {
       renderQuestionStage("original", examData.originalPassage, examData.originalQuestions, "Bài Đọc Gốc");
+    } else if (stageName === "grammar") {
+      renderGrammarStage();
     }
   }
   window.IELTSStageManager = { goToNextStage };
@@ -118,7 +124,7 @@
   // ---------------------------------------------------------------------
   // Thanh tiến trình 3 tầng
   // ---------------------------------------------------------------------
-  const STAGE_LABELS = { vocab: "📚 Từ Vựng", simplified: "📝 Bài Rút Gọn", original: "🎯 Bài Gốc" };
+  const STAGE_LABELS = { vocab: "📚 Từ Vựng", "vocab-exercises": "✏️ Luyện Từ Vựng", simplified: "📝 Bài Rút Gọn", original: "🎯 Bài Gốc", grammar: "🧩 Ngữ Pháp" };
 
   function renderStageProgress(activeStage) {
     let el = document.getElementById("stageProgress");
@@ -180,6 +186,100 @@
       document.getElementById("btnSubmit").style.display = "";
       goToNextStage();
     });
+  }
+
+  // ---------------------------------------------------------------------
+  // Tầng Luyện Từ Vựng (vocab-exercises) - gộp nhiều exercise block, chấm
+  // chung 1 lần bằng ExerciseCombinator + PETEngine như các tầng câu hỏi khác.
+  // ---------------------------------------------------------------------
+  function renderVocabExercisesStage() {
+    const target = document.getElementById("partRenderTarget");
+    document.getElementById("mainApp").classList.remove("split-mode");
+    document.getElementById("btnSubmit").style.display = "";
+    document.getElementById("btnSubmit").setAttribute("onclick", "PETEngine.checkAnswers()");
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "questions-scroll-area";
+    target.innerHTML = "";
+    target.appendChild(wrapper);
+
+    const partialCfg = ExerciseCombinator.renderAll(wrapper, examData.vocabularyExercises);
+
+    // Bảng giải thích trong resultModal: với bài tập từ vựng, hiện lại đáp án đúng dạng đơn giản
+    const expContainer = document.getElementById("explanationContainer");
+    expContainer.innerHTML = `<p style="font-size:14px;color:var(--text-muted);">Đáp án đúng đã được đánh dấu trong bài làm của bạn.</p>`;
+
+    const isFinal = stageList[stageList.length - 1] === "vocab-exercises";
+    const fullCfg = Object.assign(partialCfg, {
+      exerciseName: examData.exerciseName,
+      webhookUrl: examData.webhookUrl,
+      topic: examData.topic,
+      stage: "vocab-exercises",
+      isFinalStage: isFinal,
+      onStageComplete: goToNextStage,
+      checkDuplicates: false,
+      spamThresholdSeconds: 2,
+    });
+
+    if (!window.__ieltsEngineInitialized) {
+      window.__ieltsEngineInitialized = true;
+      PETEngine.init(fullCfg);
+    } else {
+      PETEngine.startNewStage(fullCfg);
+    }
+  }
+
+  // ---------------------------------------------------------------------
+  // Tầng Grammar - mỗi grammarTool gồm: static intro -> fillblank (Step 3)
+  // -> static reading-tool -> mcq (Exercise: Apply) -> static return-to-task.
+  // Tất cả grammarTools được gộp chung vào 1 lần nộp bài (đúng theo yêu cầu:
+  // Grammar là tầng bắt buộc tuần tự, chấm 1 lần cho toàn bộ).
+  // ---------------------------------------------------------------------
+  function renderGrammarStage() {
+    const target = document.getElementById("partRenderTarget");
+    document.getElementById("mainApp").classList.remove("split-mode");
+    document.getElementById("btnSubmit").style.display = "";
+    document.getElementById("btnSubmit").setAttribute("onclick", "PETEngine.checkAnswers()");
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "questions-scroll-area";
+    target.innerHTML = "";
+    target.appendChild(wrapper);
+
+    // Build danh sách block xen kẽ static/graded từ tất cả grammarTools
+    const blocks = [];
+    examData.grammarTools.forEach(tool => {
+      blocks.push({ type: "static", html: `<h2 class="article-title" style="margin-top:24px;">${tool.title}</h2>` });
+      blocks.push({ type: "static", html: tool.staticIntroHTML });
+      blocks.push(tool.patternExercise);
+      blocks.push({ type: "static", html: tool.staticReadingToolHTML });
+      blocks.push(tool.applyExercise);
+      blocks.push({ type: "static", html: tool.staticReturnHTML });
+    });
+
+    const partialCfg = ExerciseCombinator.renderAll(wrapper, blocks);
+
+    const expContainer = document.getElementById("explanationContainer");
+    expContainer.innerHTML = `<p style="font-size:14px;color:var(--text-muted);">Đáp án đúng đã được đánh dấu trong bài làm của bạn.</p>`;
+
+    const isFinal = stageList[stageList.length - 1] === "grammar";
+    const fullCfg = Object.assign(partialCfg, {
+      exerciseName: examData.exerciseName,
+      webhookUrl: examData.webhookUrl,
+      topic: examData.topic,
+      stage: "grammar",
+      isFinalStage: isFinal,
+      onStageComplete: goToNextStage,
+      checkDuplicates: false,
+      spamThresholdSeconds: 2,
+    });
+
+    if (!window.__ieltsEngineInitialized) {
+      window.__ieltsEngineInitialized = true;
+      PETEngine.init(fullCfg);
+    } else {
+      PETEngine.startNewStage(fullCfg);
+    }
   }
 
   // ---------------------------------------------------------------------
