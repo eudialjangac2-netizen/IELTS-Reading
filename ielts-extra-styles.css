@@ -3,6 +3,38 @@
    chưa có: thanh tiến trình 3 tầng, thẻ từ vựng, style riêng cho TFNG)
    ===================================================================== */
 
+/* ---------- Exercise blocks dùng chung (Matching / FillBlank / MCQ) ---------- */
+.exercise-block { margin-bottom: 32px; }
+.exercise-title { font-weight: 800; font-size: 16px; color: var(--primary); margin-bottom: 6px; }
+.exercise-instruction { font-size: 13.5px; color: var(--text-muted); font-style: italic; margin-bottom: 14px; }
+.word-bank {
+  background: #fffbe6; border: 1.5px dashed var(--primary-light); border-radius: 12px;
+  padding: 10px 16px; font-weight: 700; font-size: 14px; margin-bottom: 16px;
+}
+.matching-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: #fffef9; border: 1.5px solid var(--border-color); border-radius: 12px;
+  padding: 10px 14px; margin-bottom: 10px;
+}
+.matching-left { font-weight: 700; font-size: 14.5px; }
+.matching-select {
+  padding: 7px 12px; border-radius: 10px; border: 2px solid var(--primary-light);
+  font-weight: 700; font-size: 13.5px; color: var(--primary); outline: none; cursor: pointer;
+  background: white; font-family: inherit; max-width: 60%;
+}
+.fillblank-row {
+  background: #fffef9; border: 1.5px solid var(--border-color); border-radius: 12px;
+  padding: 14px 16px; margin-bottom: 12px; font-size: 15px; line-height: 1.7;
+}
+.fillblank-input {
+  border: none; border-bottom: 2px solid var(--primary); background: #fffbe6;
+  font-weight: 700; color: var(--primary); font-size: 14.5px; padding: 3px 8px;
+  width: 150px; text-align: center; font-family: inherit; outline: none; margin: 0 4px;
+}
+.grammar-static-block { font-size: 14.5px; line-height: 1.7; margin-bottom: 14px; }
+.grammar-static-block p { margin-bottom: 10px; }
+.grammar-static-block i { color: #4a5568; }
+
 /* ---------- Nút Xuất File Word (chỉ hiện trong Teacher Mode, khi bài có wordDocUrl) ---------- */
 .teacher-export-btn {
   display: inline-block; background: #2e9b5f; border: none; color: white;
