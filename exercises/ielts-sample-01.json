@@ -5,16 +5,68 @@
   "exerciseName": "IELTS Reading - Ocean Plastic Pollution",
   "webhookUrl": "YOUR_WEBHOOK_URL_HERE",
   "wordDocUrl": "word-docs/ielts-sample-01.docx",
-
   "vocabulary": [
-    { "word": "pollution", "meaning": "sự ô nhiễm", "example": "Plastic pollution is a serious problem in the ocean." },
-    { "word": "marine life", "meaning": "sinh vật biển", "example": "Marine life is often harmed by plastic waste." },
-    { "word": "decompose", "meaning": "phân hủy", "example": "Plastic takes hundreds of years to decompose." },
-    { "word": "microplastic", "meaning": "vi nhựa (mảnh nhựa siêu nhỏ)", "example": "Microplastics have been found in fish and even in drinking water." },
-    { "word": "reduce", "meaning": "giảm thiểu", "example": "Many countries are trying to reduce plastic use." },
-    { "word": "consequence", "meaning": "hậu quả", "example": "Ocean pollution has serious consequences for the environment." }
+    {
+      "word": "pollution",
+      "meaning": "sự ô nhiễm",
+      "example": "Plastic pollution is a serious problem in the ocean."
+    },
+    {
+      "word": "marine life",
+      "meaning": "sinh vật biển",
+      "example": "Marine life is often harmed by plastic waste."
+    },
+    {
+      "word": "decompose",
+      "meaning": "phân hủy",
+      "example": "Plastic takes hundreds of years to decompose."
+    },
+    {
+      "word": "microplastic",
+      "meaning": "vi nhựa (mảnh nhựa siêu nhỏ)",
+      "example": "Microplastics have been found in fish and even in drinking water."
+    },
+    {
+      "word": "reduce",
+      "meaning": "giảm thiểu",
+      "example": "Many countries are trying to reduce plastic use."
+    },
+    {
+      "word": "consequence",
+      "meaning": "hậu quả",
+      "example": "Ocean pollution has serious consequences for the environment."
+    },
+    {
+      "word": "debris",
+      "meaning": "mảnh vụn, rác thải",
+      "example": "Plastic debris can be found floating in every ocean."
+    },
+    {
+      "word": "ingest",
+      "meaning": "nuốt, ăn phải (vô tình)",
+      "example": "Fish often ingest small pieces of plastic."
+    },
+    {
+      "word": "persist",
+      "meaning": "tồn tại dai dẳng, kéo dài",
+      "example": "Plastic can persist in the ocean for centuries."
+    },
+    {
+      "word": "curb",
+      "meaning": "hạn chế, kiềm chế",
+      "example": "New laws aim to curb the use of plastic bags."
+    },
+    {
+      "word": "legislation",
+      "meaning": "luật pháp, các đạo luật",
+      "example": "Governments have introduced legislation to reduce plastic waste."
+    },
+    {
+      "word": "coordinated",
+      "meaning": "được phối hợp, đồng bộ",
+      "example": "Solving pollution needs coordinated action from many countries."
+    }
   ],
-
   "simplifiedPassage": {
     "title": "Plastic in the Ocean",
     "author": "",
@@ -29,17 +81,32 @@
     "type": "tfng",
     "instructions": "Đọc đoạn văn rút gọn bên trái và cho biết mỗi câu sau là TRUE, FALSE, hay NOT GIVEN.",
     "items": [
-      { "id": 1, "statement": "Sea animals sometimes eat plastic by accident.", "answer": "TRUE",
-        "hint": "💡 Đọc lại câu 'Fish, turtles, and birds often eat this plastic by mistake'." },
-      { "id": 2, "statement": "Plastic disappears completely after it breaks into microplastics.", "answer": "FALSE",
-        "hint": "💡 Bài viết nói 'it does not disappear completely' — vậy câu này đúng hay sai?" },
-      { "id": 3, "statement": "Every country in the world has banned plastic bags.", "answer": "NOT GIVEN",
-        "hint": "💡 Bài chỉ nói 'some countries' — không nói TẤT CẢ các nước." },
-      { "id": 4, "statement": "Scientists have found microplastics in drinking water.", "answer": "TRUE",
-        "hint": "💡 Đọc lại câu về nơi các nhà khoa học tìm thấy vi nhựa." }
+      {
+        "id": 1,
+        "statement": "Sea animals sometimes eat plastic by accident.",
+        "answer": "TRUE",
+        "hint": "💡 Đọc lại câu 'Fish, turtles, and birds often eat this plastic by mistake'."
+      },
+      {
+        "id": 2,
+        "statement": "Plastic disappears completely after it breaks into microplastics.",
+        "answer": "FALSE",
+        "hint": "💡 Bài viết nói 'it does not disappear completely' — vậy câu này đúng hay sai?"
+      },
+      {
+        "id": 3,
+        "statement": "Every country in the world has banned plastic bags.",
+        "answer": "NOT GIVEN",
+        "hint": "💡 Bài chỉ nói 'some countries' — không nói TẤT CẢ các nước."
+      },
+      {
+        "id": 4,
+        "statement": "Scientists have found microplastics in drinking water.",
+        "answer": "TRUE",
+        "hint": "💡 Đọc lại câu về nơi các nhà khoa học tìm thấy vi nhựa."
+      }
     ]
   },
-
   "originalPassage": {
     "title": "The Global Crisis of Ocean Plastic Pollution",
     "author": "",
@@ -54,32 +121,413 @@
     "type": "tfng",
     "instructions": "Đọc đoạn văn gốc bên trái và cho biết mỗi câu sau là TRUE, FALSE, hay NOT GIVEN.",
     "items": [
-      { "id": 5, "statement": "Most ocean plastic comes from sources based on land rather than from ships.", "answer": "TRUE",
-        "hint": "💡 'much of it originating from land-based sources'." },
-      { "id": 6, "statement": "Plastic debris in the ocean fully decomposes within a few decades.", "answer": "FALSE",
-        "hint": "💡 Bài nói plastic 'persist for centuries' và chỉ vỡ thành mảnh nhỏ chứ không phân hủy hoàn toàn." },
-      { "id": 7, "statement": "Scientists fully understand the long-term health effects of microplastics on humans.", "answer": "FALSE",
-        "hint": "💡 Đọc kỹ cụm 'remain only partially understood'." },
-      { "id": 8, "statement": "All countries have banned single-use plastic packaging.", "answer": "NOT GIVEN",
-        "hint": "💡 Bài chỉ nói 'a number of governments', không nói tất cả các nước." },
-      { "id": 9, "statement": "Experts believe banning plastic bags alone is enough to solve the problem.", "answer": "FALSE",
-        "hint": "💡 'experts argue that a more comprehensive approach is required' — nghĩa là chưa đủ." }
+      {
+        "id": 5,
+        "statement": "Most ocean plastic comes from sources based on land rather than from ships.",
+        "answer": "TRUE",
+        "hint": "💡 'much of it originating from land-based sources'."
+      },
+      {
+        "id": 6,
+        "statement": "Plastic debris in the ocean fully decomposes within a few decades.",
+        "answer": "FALSE",
+        "hint": "💡 Bài nói plastic 'persist for centuries' và chỉ vỡ thành mảnh nhỏ chứ không phân hủy hoàn toàn."
+      },
+      {
+        "id": 7,
+        "statement": "Scientists fully understand the long-term health effects of microplastics on humans.",
+        "answer": "FALSE",
+        "hint": "💡 Đọc kỹ cụm 'remain only partially understood'."
+      },
+      {
+        "id": 8,
+        "statement": "All countries have banned single-use plastic packaging.",
+        "answer": "NOT GIVEN",
+        "hint": "💡 Bài chỉ nói 'a number of governments', không nói tất cả các nước."
+      },
+      {
+        "id": 9,
+        "statement": "Experts believe banning plastic bags alone is enough to solve the problem.",
+        "answer": "FALSE",
+        "hint": "💡 'experts argue that a more comprehensive approach is required' — nghĩa là chưa đủ."
+      }
     ]
   },
-
   "explanation": {
     "simplified": [
-      { "q": 1, "ans": "TRUE", "key": "Bài viết nói rõ 'Fish, turtles, and birds often eat this plastic by mistake' — cá và các sinh vật biển vô tình ăn phải nhựa." },
-      { "q": 2, "ans": "FALSE", "key": "Bài viết nói 'it does not disappear completely' — vi nhựa KHÔNG biến mất hoàn toàn, nên câu hỏi (nói ngược lại) là SAI." },
-      { "q": 3, "ans": "NOT GIVEN", "key": "Bài chỉ nói 'some countries have banned plastic bags', không có thông tin về TẤT CẢ các nước trên thế giới." },
-      { "q": 4, "ans": "TRUE", "key": "Bài viết nói rõ các nhà khoa học tìm thấy vi nhựa 'in fish, in salt, and even in drinking water'." }
+      {
+        "q": 1,
+        "ans": "TRUE",
+        "key": "Bài viết nói rõ 'Fish, turtles, and birds often eat this plastic by mistake' — cá và các sinh vật biển vô tình ăn phải nhựa."
+      },
+      {
+        "q": 2,
+        "ans": "FALSE",
+        "key": "Bài viết nói 'it does not disappear completely' — vi nhựa KHÔNG biến mất hoàn toàn, nên câu hỏi (nói ngược lại) là SAI."
+      },
+      {
+        "q": 3,
+        "ans": "NOT GIVEN",
+        "key": "Bài chỉ nói 'some countries have banned plastic bags', không có thông tin về TẤT CẢ các nước trên thế giới."
+      },
+      {
+        "q": 4,
+        "ans": "TRUE",
+        "key": "Bài viết nói rõ các nhà khoa học tìm thấy vi nhựa 'in fish, in salt, and even in drinking water'."
+      }
     ],
     "original": [
-      { "q": 5, "ans": "TRUE", "key": "'much of it originating from land-based sources' cho thấy phần lớn nhựa đến từ đất liền, không phải từ tàu thuyền." },
-      { "q": 6, "ans": "FALSE", "key": "Bài nói nhựa 'persist for centuries' và chỉ 'gradually breaking down into smaller fragments' chứ không phân hủy hoàn toàn." },
-      { "q": 7, "ans": "FALSE", "key": "Cụm 'remain only partially understood' cho thấy các nhà khoa học CHƯA hiểu đầy đủ về tác động sức khỏe lâu dài." },
-      { "q": 8, "ans": "NOT GIVEN", "key": "Bài chỉ nói 'a number of governments' (một số chính phủ), không đề cập TẤT CẢ các nước." },
-      { "q": 9, "ans": "FALSE", "key": "Các chuyên gia cho rằng cần 'a more comprehensive approach', nghĩa là chỉ cấm túi nhựa thôi là CHƯA đủ." }
+      {
+        "q": 5,
+        "ans": "TRUE",
+        "key": "'much of it originating from land-based sources' cho thấy phần lớn nhựa đến từ đất liền, không phải từ tàu thuyền."
+      },
+      {
+        "q": 6,
+        "ans": "FALSE",
+        "key": "Bài nói nhựa 'persist for centuries' và chỉ 'gradually breaking down into smaller fragments' chứ không phân hủy hoàn toàn."
+      },
+      {
+        "q": 7,
+        "ans": "FALSE",
+        "key": "Cụm 'remain only partially understood' cho thấy các nhà khoa học CHƯA hiểu đầy đủ về tác động sức khỏe lâu dài."
+      },
+      {
+        "q": 8,
+        "ans": "NOT GIVEN",
+        "key": "Bài chỉ nói 'a number of governments' (một số chính phủ), không đề cập TẤT CẢ các nước."
+      },
+      {
+        "q": 9,
+        "ans": "FALSE",
+        "key": "Các chuyên gia cho rằng cần 'a more comprehensive approach', nghĩa là chỉ cấm túi nhựa thôi là CHƯA đủ."
+      }
     ]
-  }
+  },
+  "vocabularyExercises": [
+    {
+      "type": "matching",
+      "title": "Exercise 1: Match the meaning",
+      "instructions": "Match the words with their meanings.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "the presence of harmful substances in the environment"
+        },
+        {
+          "letter": "B",
+          "text": "to break down naturally over time"
+        },
+        {
+          "letter": "C",
+          "text": "a very small piece of plastic"
+        },
+        {
+          "letter": "D",
+          "text": "a result of an action or situation"
+        },
+        {
+          "letter": "E",
+          "text": "to take something into the body by eating or swallowing"
+        },
+        {
+          "letter": "F",
+          "text": "to continue to exist for a long time"
+        }
+      ],
+      "items": [
+        {
+          "id": "v1_1",
+          "left": "pollution",
+          "answer": "A"
+        },
+        {
+          "id": "v1_2",
+          "left": "decompose",
+          "answer": "B"
+        },
+        {
+          "id": "v1_3",
+          "left": "microplastic",
+          "answer": "C"
+        },
+        {
+          "id": "v1_4",
+          "left": "consequence",
+          "answer": "D"
+        },
+        {
+          "id": "v1_5",
+          "left": "ingest",
+          "answer": "E"
+        },
+        {
+          "id": "v1_6",
+          "left": "persist",
+          "answer": "F"
+        }
+      ]
+    },
+    {
+      "type": "fillblank",
+      "title": "Exercise 2: Vocabulary in context",
+      "instructions": "Complete the sentences with words from the box.",
+      "wordBank": [
+        "reduce",
+        "debris",
+        "curb",
+        "legislation",
+        "coordinated",
+        "consequence"
+      ],
+      "items": [
+        {
+          "id": "v2_1",
+          "sentenceHTML": "Plastic {{blank}} can be found floating in every ocean in the world.",
+          "answers": [
+            "debris"
+          ]
+        },
+        {
+          "id": "v2_2",
+          "sentenceHTML": "Governments have introduced {{blank}} to limit the use of plastic bags.",
+          "answers": [
+            "legislation"
+          ]
+        },
+        {
+          "id": "v2_3",
+          "sentenceHTML": "Many countries are trying to {{blank}} the amount of plastic they use.",
+          "answers": [
+            "reduce"
+          ]
+        },
+        {
+          "id": "v2_4",
+          "sentenceHTML": "Solving this problem will require {{blank}} action from many countries together.",
+          "answers": [
+            "coordinated"
+          ]
+        },
+        {
+          "id": "v2_5",
+          "sentenceHTML": "Ocean pollution is a serious {{blank}} of careless waste management.",
+          "answers": [
+            "consequence"
+          ]
+        },
+        {
+          "id": "v2_6",
+          "sentenceHTML": "New laws aim to {{blank}} the use of single-use plastic items.",
+          "answers": [
+            "curb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Exercise 3: Spot the IELTS paraphrase",
+      "instructions": "Match the everyday wording with the academic expression from the passage.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "originating from land-based sources"
+        },
+        {
+          "letter": "B",
+          "text": "persist for centuries... rather than fully decomposing"
+        },
+        {
+          "letter": "C",
+          "text": "remain only partially understood"
+        },
+        {
+          "letter": "D",
+          "text": "coordinated action"
+        },
+        {
+          "letter": "E",
+          "text": "legislation aimed at curbing single-use plastics"
+        }
+      ],
+      "items": [
+        {
+          "id": "v3_1",
+          "left": "most of it comes from land, not ships",
+          "answer": "A"
+        },
+        {
+          "id": "v3_2",
+          "left": "does not fully break down",
+          "answer": "B"
+        },
+        {
+          "id": "v3_3",
+          "left": "scientists don't fully understand the health effects",
+          "answer": "C"
+        },
+        {
+          "id": "v3_4",
+          "left": "a joint effort is needed",
+          "answer": "D"
+        },
+        {
+          "id": "v3_5",
+          "left": "laws to reduce single-use plastic",
+          "answer": "E"
+        }
+      ]
+    }
+  ],
+  "grammarTools": [
+    {
+      "title": "Grammar Tool 1: Passive voice",
+      "staticIntroHTML": "<p><b>Step 1: Look at the passage</b></p><p><i>“It is estimated that more than eight million tonnes of plastic waste enter the world's oceans annually.”</i></p><p><i>“...gradually breaking down into smaller fragments known as microplastics.”</i></p><p><i>“Microplastics... have been detected... in table salt and bottled water.”</i></p><p><b>Step 2: Notice</b></p><p>Compare: “Scientists estimate that more than eight million tonnes...” (active) vs “It is estimated that more than eight million tonnes...” (passive) — the passive puts the focus on the FACT/RESULT, not on who says it.</p>",
+      "patternExercise": {
+        "type": "fillblank",
+        "title": "Step 3: Discover the pattern",
+        "instructions": "Complete the sentence.",
+        "items": [
+          {
+            "id": "g1_p1",
+            "sentenceHTML": "Passive voice is often used in academic writing when the {{blank}} (what happened) is more important than who did it.",
+            "answers": [
+              "result",
+              "action",
+              "fact"
+            ]
+          }
+        ]
+      },
+      "staticReadingToolHTML": "<p><b>Step 4: Use it as a READING TOOL</b></p><p>When you see a passive sentence, turn it into a simple active idea in your head.</p><p>Example: “Microplastics have been detected in table salt and bottled water.”</p><p><b>Simple meaning: People found microplastics in table salt and bottled water.</b></p>",
+      "applyExercise": {
+        "type": "mcq",
+        "title": "Exercise: Apply",
+        "instructions": "Choose the correct simple meaning.",
+        "items": [
+          {
+            "id": "g1_e1",
+            "question": "“It is estimated that more than eight million tonnes of plastic waste enter the oceans annually.” — What is the simple meaning?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "Scientists guess that about eight million tonnes of plastic enters the oceans every year."
+              },
+              {
+                "letter": "B",
+                "text": "Eight million tonnes of plastic is removed from the oceans every year."
+              },
+              {
+                "letter": "C",
+                "text": "Governments deny that plastic enters the oceans."
+              },
+              {
+                "letter": "D",
+                "text": "Nobody knows how much plastic enters the oceans."
+              }
+            ],
+            "answer": "A"
+          },
+          {
+            "id": "g1_e2",
+            "question": "“...effects on human health that remain only partially understood.” — What is the simple meaning?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "Scientists fully understand the health effects."
+              },
+              {
+                "letter": "B",
+                "text": "Scientists do NOT yet fully understand the health effects."
+              },
+              {
+                "letter": "C",
+                "text": "The health effects are not serious."
+              },
+              {
+                "letter": "D",
+                "text": "Scientists refuse to study the health effects."
+              }
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      "staticReturnHTML": "<p><b>Step 5: Return to the IELTS task</b></p><p>Passage idea: “...effects on human health that remain only partially understood.”</p><p>Question idea: Scientists fully understand the long-term health effects of microplastics on humans.</p><p><b>The meanings are opposite → FALSE.</b></p>"
+    },
+    {
+      "title": "Grammar Tool 2: Participle clauses",
+      "staticIntroHTML": "<p><b>Step 1: Look at the passage</b></p><p><i>“...much of it originating from land-based sources such as improperly managed waste.”</i></p><p><i>“...plastic debris can persist for centuries, gradually breaking down into smaller fragments...”</i></p><p><i>“...raising concerns about long-term effects on human health...”</i></p><p><b>Step 2: Notice</b></p><p>Each of these phrases adds extra information about the noun or idea right before it, without repeating the subject or adding a new full verb.</p>",
+      "patternExercise": {
+        "type": "fillblank",
+        "title": "Step 3: Discover the pattern",
+        "instructions": "Complete the sentence.",
+        "items": [
+          {
+            "id": "g2_p1",
+            "sentenceHTML": "A participle clause is a shortened way of adding extra information without repeating the {{blank}} of the main clause.",
+            "answers": [
+              "subject"
+            ]
+          }
+        ]
+      },
+      "staticReadingToolHTML": "<p><b>Step 4: Use it as a READING TOOL</b></p><p>Expand the participle clause into a full clause with ‘and’ or ‘because’.</p><p>Example: “...plastic debris can persist for centuries, gradually breaking down into smaller fragments...”</p><p><b>Expanded: Plastic debris can persist for centuries, AND it gradually breaks down into smaller fragments.</b></p>",
+      "applyExercise": {
+        "type": "mcq",
+        "title": "Exercise: Apply",
+        "instructions": "Choose the correct answer.",
+        "items": [
+          {
+            "id": "g2_e1",
+            "question": "“...governments have introduced legislation aimed at curbing single-use plastics.” — What does ‘aimed at curbing’ describe?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "the purpose of the legislation"
+              },
+              {
+                "letter": "B",
+                "text": "the age of the legislation"
+              },
+              {
+                "letter": "C",
+                "text": "who wrote the legislation"
+              },
+              {
+                "letter": "D",
+                "text": "the cost of the legislation"
+              }
+            ],
+            "answer": "A"
+          },
+          {
+            "id": "g2_e2",
+            "question": "“Marine species... frequently ingest plastic debris, mistaking it for food.” — What is the simple meaning?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "Marine species eat plastic on purpose, knowing it is not food."
+              },
+              {
+                "letter": "B",
+                "text": "Marine species eat plastic because they think it is food."
+              },
+              {
+                "letter": "C",
+                "text": "Marine species never eat plastic."
+              },
+              {
+                "letter": "D",
+                "text": "Marine species are taught to avoid plastic."
+              }
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      "staticReturnHTML": "<p><b>Step 5: Return to the IELTS task</b></p><p>Passage idea: “Marine species... frequently ingest plastic debris, mistaking it for food.”</p><p>This explains WHY marine animals eat plastic — useful for a question about the cause of harm to marine life.</p>"
+    }
+  ]
 }
