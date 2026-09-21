@@ -142,6 +142,11 @@
   padding: 1px 6px; border-radius: 8px; margin-left: 2px; text-transform: uppercase;
 }
 #btnReviewExplanation { background: #4a5568; margin-right: 10px; }
+.restart-btn {
+  background: rgba(0,0,0,0.05); border: 1px solid var(--border-color); color: var(--text-muted);
+  font-size: 12.5px; font-weight: 700; padding: 6px 14px; border-radius: 20px; cursor: pointer;
+}
+.restart-btn:hover { background: rgba(0,0,0,0.09); color: var(--primary); }
 .stage-step.active { background: var(--primary); color: #fff; }
 .stage-step.done { background: rgba(0,0,0,0.03); color: var(--primary); }
 .stage-step .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
