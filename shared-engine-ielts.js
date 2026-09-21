@@ -88,7 +88,20 @@
   // KHÔNG reset: studentName, isTeacher, startTime, tabSwitchCount (đếm dồn cả bài)
   // CÓ reset: attemptCount, spamViolations, firstSubmissionDataSent, stageStartTime
   PETEngine.startNewStage = function (newCfg) {
-    cfg = Object.assign({}, cfg, newCfg);
+    // QUAN TRỌNG: reset HOÀN TOÀN cfg (không merge với cfg cũ) để tránh các field
+    // hàm tùy chọn của tầng trước (vd isCorrectMatch của ExerciseCombinator) bị
+    // "rò rỉ" sang tầng sau không định nghĩa lại field đó, gây lỗi runtime.
+    cfg = Object.assign(
+      {
+        highlightScope: "left",
+        spamThresholdSeconds: 1.5,
+        checkDuplicates: false,
+        questionIds: [],
+        stage: "single",
+        isFinalStage: true,
+      },
+      newCfg
+    );
     attemptCount = 0;
     spamViolations = 0;
     firstSubmissionDataSent = false;
