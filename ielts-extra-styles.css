@@ -3,6 +3,14 @@
    chưa có: thanh tiến trình 3 tầng, thẻ từ vựng, style riêng cho TFNG)
    ===================================================================== */
 
+/* ---------- Nút Xuất File Word (chỉ hiện trong Teacher Mode, khi bài có wordDocUrl) ---------- */
+.teacher-export-btn {
+  display: inline-block; background: #2e9b5f; border: none; color: white;
+  padding: 6px 14px; border-radius: 20px; cursor: pointer; font-weight: 700;
+  margin-left: 8px; font-size: 14px; text-decoration: none;
+}
+.teacher-export-btn:hover { filter: brightness(1.08); }
+
 /* ---------- Màn Login v2: Nàng tiên trái (chảy vào nền, không viền) - Form phải ---------- */
 .login-screen-v2 {
   display: flex; min-height: 100vh; padding: 0; background: none;
