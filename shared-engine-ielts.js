@@ -400,7 +400,7 @@
       renderResultSummary();
       const continueBtn = document.getElementById("btnResultContinue");
       if (continueBtn) {
-        continueBtn.textContent = cfg.isFinalStage ? "Làm Bài Mới 🔄" : "Tiếp Tục Sang Tầng Tiếp Theo ➜";
+        continueBtn.textContent = cfg.isFinalStage ? "🎉 Hoàn Thành! Đóng" : "Tiếp Tục Sang Tầng Tiếp Theo ➜";
       }
       const resultModal = document.getElementById("resultModal");
       if (resultModal) resultModal.style.display = "block";
@@ -431,15 +431,16 @@
     if (modalOverlay) modalOverlay.style.display = "none";
   };
 
-  // Nút trong resultModal gọi hàm này thay vì location.reload() trực tiếp,
-  // để engine tự quyết định: tầng cuối -> reload; chưa phải tầng cuối -> chuyển tầng.
+  // Nút trong resultModal gọi hàm này. KHÔNG còn tự động reload/đăng xuất khi
+  // xong tầng cuối - luôn gọi onStageComplete() (nếu có) để tiếp tục sang tầng
+  // kế (vd tầng Grammar không bắt buộc), hoặc chỉ đóng modal nếu không còn
+  // tầng nào tiếp theo. Học sinh muốn làm lại từ đầu phải bấm nút riêng
+  // "Làm Lại Từ Đầu" (do Stage Manager cung cấp), không bị ép reload ở đây.
   PETEngine.handleResultContinue = function () {
     const resultModal = document.getElementById("resultModal");
     if (resultModal) resultModal.style.display = "none";
 
-    if (cfg.isFinalStage) {
-      location.reload();
-    } else if (typeof cfg.onStageComplete === "function") {
+    if (typeof cfg.onStageComplete === "function") {
       cfg.onStageComplete();
     }
   };
