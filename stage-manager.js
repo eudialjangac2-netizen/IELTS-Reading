@@ -221,12 +221,10 @@
       spamThresholdSeconds: 2,
     });
 
-    if (!window.__ieltsEngineInitialized) {
-      window.__ieltsEngineInitialized = true;
-      PETEngine.init(fullCfg);
-    } else {
-      PETEngine.startNewStage(fullCfg);
-    }
+    // PETEngine.init() đã chạy ngay sau khi login (xem onIELTSLoginSuccess),
+    // nên từ đây trở đi luôn dùng startNewStage() - không gọi init() lại lần nữa
+    // (gọi lại sẽ đăng ký trùng các event listener chống gian lận).
+    PETEngine.startNewStage(fullCfg);
   }
 
   // ---------------------------------------------------------------------
@@ -274,12 +272,9 @@
       spamThresholdSeconds: 2,
     });
 
-    if (!window.__ieltsEngineInitialized) {
-      window.__ieltsEngineInitialized = true;
-      PETEngine.init(fullCfg);
-    } else {
-      PETEngine.startNewStage(fullCfg);
-    }
+    // PETEngine.init() đã chạy ngay sau khi login (xem onIELTSLoginSuccess),
+    // nên từ đây trở đi luôn dùng startNewStage().
+    PETEngine.startNewStage(fullCfg);
   }
 
   // ---------------------------------------------------------------------
