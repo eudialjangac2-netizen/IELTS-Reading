@@ -35,6 +35,18 @@
 .grammar-static-block p { margin-bottom: 10px; }
 .grammar-static-block i { color: #4a5568; }
 
+/* ---------- Ghi đè footer: statusText có thể dài (vd "Đã làm 12/17 câu...")
+   -> cho phép xuống dòng gọn thay vì đẩy tràn/che khuất nội dung phía trên ---------- */
+.submit-footer {
+  flex-wrap: wrap; row-gap: 8px; min-height: 0;
+}
+.submit-footer > div:first-child {
+  font-size: 13px; flex: 1 1 auto; min-width: 180px;
+}
+/* Tầng không split-mode (vocab-exercises, grammar) có thể nhiều câu hơn ->
+   tăng khoảng đệm đáy để không bị footer che mất câu cuối */
+#mainApp:not(.split-mode) .questions-scroll-area { padding-bottom: 140px; }
+
 /* ---------- Nút Xuất File Word (chỉ hiện trong Teacher Mode, khi bài có wordDocUrl) ---------- */
 .teacher-export-btn {
   display: inline-block; background: #2e9b5f; border: none; color: white;
@@ -85,14 +97,16 @@
   .login-form-pane { padding: 20px 24px 48px; }
 }
 
-/* ---------- Thanh tiến trình 3 tầng (dưới app-header) ---------- */
+/* ---------- Thanh tiến trình 3-5 tầng (dưới app-header) ---------- */
 .stage-progress {
   display: flex; align-items: center; justify-content: center; gap: 0;
   background: var(--bg-card); padding: 10px 16px; border-bottom: 2px solid var(--border-color);
+  overflow-x: auto; flex-wrap: nowrap; white-space: nowrap;
 }
 .stage-step {
-  display: flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 20px;
-  font-size: 13px; font-weight: 700; color: var(--text-muted); background: rgba(0,0,0,0.03);
+  display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 20px;
+  font-size: 12.5px; font-weight: 700; color: var(--text-muted); background: rgba(0,0,0,0.03);
+  flex-shrink: 0;
 }
 .stage-step.active { background: var(--primary); color: #fff; }
 .stage-step.done { background: rgba(0,0,0,0.03); color: var(--primary); }
