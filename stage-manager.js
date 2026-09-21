@@ -14,6 +14,18 @@
   let stageList = [];      // ví dụ: ["vocab", "simplified", "original"]
   let currentStageIndex = -1;
   const completedStages = new Set(); // các tầng đã đạt 100% ít nhất 1 lần
+  let reviewModeActive = false;      // đang ở chế độ XEM LẠI (không sửa được) hay không
+
+  // Grammar là tầng KHÔNG BẮT BUỘC: học sinh không cần hoàn thành nó để được
+  // tính là "đã xong bài". Tầng bắt buộc CUỐI CÙNG trong danh sách mới là tầng
+  // quyết định khi nào hiện màn "Hoàn Thành Xuất Sắc" + nút "Làm Bài Mới".
+  const OPTIONAL_STAGES = new Set(["grammar"]);
+  function isStageFinal(stageName) {
+    for (let i = stageList.length - 1; i >= 0; i--) {
+      if (!OPTIONAL_STAGES.has(stageList[i])) return stageList[i] === stageName;
+    }
+    return stageList[stageList.length - 1] === stageName; // fallback nếu tất cả đều optional
+  }
 
   async function bootExercise() {
     const params = new URLSearchParams(window.location.search);
@@ -78,6 +90,8 @@
     const fairyLabel = document.getElementById("fairyNameLabel");
     if (fairyLabel) fairyLabel.textContent = "🧚 " + seasonTheme.fairyName;
 
+    wireResultModalContinueButton();
+
     // Đợi học sinh login xong (PETEngine sẽ gọi hàm này qua window.onIELTSLoginSuccess)
     window.onIELTSLoginSuccess = function () {
       // Khởi động engine NGAY sau khi login (dù tầng đầu tiên là Vocab hay câu hỏi),
@@ -137,6 +151,69 @@
   window.IELTSStageManager.markStageComplete = markStageComplete;
 
   // ---------------------------------------------------------------------
+  // CHẾ ĐỘ XEM LẠI (review mode) - khi học sinh bấm vào 1 tầng ĐÃ HOÀN THÀNH
+  // (dấu ✅), tầng đó được render như bình thường nhưng: điền sẵn đáp án đúng,
+  // khoá không cho sửa, ẩn nút nộp bài, và có nút riêng để mở bảng giải thích.
+  // Vì hệ thống yêu cầu 100% đúng mới coi là hoàn thành, "xem lại" 1 tầng đã
+  // xong nghĩa là xem lại đáp án ĐÚNG + giải thích, không cần làm lại từ đầu.
+  // ---------------------------------------------------------------------
+  function exitReviewModeIfNeeded() {
+    reviewModeActive = false;
+    const reviewBtn = document.getElementById("btnReviewExplanation");
+    if (reviewBtn) reviewBtn.style.display = "none";
+  }
+
+  function applyReviewModeIfNeeded() {
+    if (!completedStages.has(currentStageIndex)) return;
+    reviewModeActive = true;
+
+    // Điền sẵn đáp án đúng (dùng lại đúng cơ chế Auto-Fill của Teacher Mode)
+    // rồi khoá toàn bộ input lại để chỉ xem, không sửa được.
+    PETEngine.teacherAutoFill(true);
+    document.querySelectorAll("#partRenderTarget input, #partRenderTarget select").forEach(el => {
+      el.disabled = true;
+    });
+
+    const btnSubmit = document.getElementById("btnSubmit");
+    if (btnSubmit) btnSubmit.style.display = "none";
+
+    const statusText = document.getElementById("statusText");
+    if (statusText) {
+      statusText.textContent = "📋 Bạn đang xem lại tầng đã hoàn thành - đáp án đúng đã được điền sẵn.";
+      statusText.style.color = "var(--primary)";
+    }
+
+    let reviewBtn = document.getElementById("btnReviewExplanation");
+    if (!reviewBtn) {
+      reviewBtn = document.createElement("button");
+      reviewBtn.id = "btnReviewExplanation";
+      reviewBtn.className = "btn-submit";
+      document.querySelector(".submit-footer").appendChild(reviewBtn);
+    }
+    reviewBtn.textContent = "📖 Xem Giải Thích Đáp Án";
+    reviewBtn.style.display = "";
+    reviewBtn.onclick = () => {
+      document.getElementById("btnResultContinue").textContent = "Đóng";
+      document.getElementById("resultModal").style.display = "block";
+    };
+  }
+
+  // Nút "Tiếp Tục" trong resultModal: khi đang ở review mode thì chỉ ĐÓNG modal
+  // (không chuyển tầng lại từ đầu); khi đang làm bài bình thường thì giữ nguyên
+  // hành vi cũ (PETEngine.handleResultContinue tự quyết định chuyển tầng/reload).
+  function wireResultModalContinueButton() {
+    const continueBtn = document.getElementById("btnResultContinue");
+    if (!continueBtn) return;
+    continueBtn.onclick = function () {
+      if (reviewModeActive) {
+        document.getElementById("resultModal").style.display = "none";
+      } else {
+        PETEngine.handleResultContinue();
+      }
+    };
+  }
+
+  // ---------------------------------------------------------------------
   // Thanh tiến trình 3 tầng
   // ---------------------------------------------------------------------
   const STAGE_LABELS = { vocab: "📚 Từ Vựng", "vocab-exercises": "✏️ Luyện Từ Vựng", simplified: "📝 Bài Rút Gọn", original: "🎯 Bài Gốc", grammar: "🧩 Ngữ Pháp" };
@@ -153,7 +230,8 @@
     el.innerHTML = stageList.map((s, i) => {
       const cls = s === activeStage ? "active" : (completedStages.has(i) ? "done" : "");
       const icon = completedStages.has(i) ? "✅" : "";
-      return `<div class="stage-step ${cls}" data-stage-index="${i}">${icon ? "" : `<span class="dot"></span>`}${icon} ${STAGE_LABELS[s]}</div>`
+      const optionalTag = OPTIONAL_STAGES.has(s) ? `<span class="optional-tag">tuỳ chọn</span>` : "";
+      return `<div class="stage-step ${cls}" data-stage-index="${i}">${icon ? "" : `<span class="dot"></span>`}${icon} ${STAGE_LABELS[s]}${optionalTag}</div>`
         + (i < stageList.length - 1 ? `<span class="stage-arrow">→</span>` : "");
     }).join("");
 
@@ -171,6 +249,7 @@
   // Tầng Từ Vựng (không chấm điểm, chỉ yêu cầu xem qua rồi bấm Tiếp tục)
   // ---------------------------------------------------------------------
   function renderVocabStage() {
+    exitReviewModeIfNeeded();
     const target = document.getElementById("partRenderTarget");
     document.getElementById("mainApp").classList.remove("split-mode");
     document.getElementById("btnSubmit").style.display = "none"; // tầng này không dùng nút Kiểm Tra Đáp Án chung
@@ -218,6 +297,7 @@
   // chung 1 lần bằng ExerciseCombinator + PETEngine như các tầng câu hỏi khác.
   // ---------------------------------------------------------------------
   function renderVocabExercisesStage() {
+    exitReviewModeIfNeeded();
     const target = document.getElementById("partRenderTarget");
     document.getElementById("mainApp").classList.remove("split-mode");
     document.getElementById("btnSubmit").style.display = "";
@@ -234,7 +314,7 @@
     const expContainer = document.getElementById("explanationContainer");
     expContainer.innerHTML = `<p style="font-size:14px;color:var(--text-muted);">Đáp án đúng đã được đánh dấu trong bài làm của bạn.</p>`;
 
-    const isFinal = stageList[stageList.length - 1] === "vocab-exercises";
+    const isFinal = isStageFinal("vocab-exercises");
     const fullCfg = Object.assign(partialCfg, {
       exerciseName: examData.exerciseName,
       webhookUrl: examData.webhookUrl,
@@ -250,6 +330,7 @@
     // nên từ đây trở đi luôn dùng startNewStage() - không gọi init() lại lần nữa
     // (gọi lại sẽ đăng ký trùng các event listener chống gian lận).
     PETEngine.startNewStage(fullCfg);
+    applyReviewModeIfNeeded();
   }
 
   // ---------------------------------------------------------------------
@@ -259,6 +340,7 @@
   // Grammar là tầng bắt buộc tuần tự, chấm 1 lần cho toàn bộ).
   // ---------------------------------------------------------------------
   function renderGrammarStage() {
+    exitReviewModeIfNeeded();
     const target = document.getElementById("partRenderTarget");
     document.getElementById("mainApp").classList.remove("split-mode");
     document.getElementById("btnSubmit").style.display = "";
@@ -285,7 +367,7 @@
     const expContainer = document.getElementById("explanationContainer");
     expContainer.innerHTML = `<p style="font-size:14px;color:var(--text-muted);">Đáp án đúng đã được đánh dấu trong bài làm của bạn.</p>`;
 
-    const isFinal = stageList[stageList.length - 1] === "grammar";
+    const isFinal = isStageFinal("grammar");
     const fullCfg = Object.assign(partialCfg, {
       exerciseName: examData.exerciseName,
       webhookUrl: examData.webhookUrl,
@@ -300,12 +382,14 @@
     // PETEngine.init() đã chạy ngay sau khi login (xem onIELTSLoginSuccess),
     // nên từ đây trở đi luôn dùng startNewStage().
     PETEngine.startNewStage(fullCfg);
+    applyReviewModeIfNeeded();
   }
 
   // ---------------------------------------------------------------------
   // Tầng Simplified / Original (dùng chung TFNGRenderer + PETEngine)
   // ---------------------------------------------------------------------
   function renderQuestionStage(stageName, passage, questionsBlock, rangeLabel) {
+    exitReviewModeIfNeeded();
     const target = document.getElementById("partRenderTarget");
     document.getElementById("btnSubmit").style.display = "";
     document.getElementById("btnSubmit").setAttribute("onclick", "PETEngine.checkAnswers()");
@@ -320,7 +404,7 @@
       );
 
       const engineCfg = TFNGRenderer.buildEngineConfig(questionsBlock);
-      const isFinal = stageList[stageList.length - 1] === stageName;
+      const isFinal = isStageFinal(stageName);
 
       const fullCfg = Object.assign(engineCfg, {
         exerciseName: examData.exerciseName,
@@ -334,6 +418,7 @@
       // PETEngine.init() đã chạy ngay sau khi login (xem onIELTSLoginSuccess),
       // nên từ tầng câu hỏi đầu tiên trở đi luôn dùng startNewStage().
       PETEngine.startNewStage(fullCfg);
+      applyReviewModeIfNeeded();
     } else if (questionsBlock.type === "combo") {
       const engineCfg = ComboRenderer.render(target, passage, questionsBlock, rangeLabel);
       TFNGRenderer.renderExplanation(
@@ -341,7 +426,7 @@
         examData.explanation[stageName]
       );
 
-      const isFinal = stageList[stageList.length - 1] === stageName;
+      const isFinal = isStageFinal(stageName);
       const fullCfg = Object.assign(engineCfg, {
         exerciseName: examData.exerciseName,
         webhookUrl: examData.webhookUrl,
@@ -353,6 +438,7 @@
       });
 
       PETEngine.startNewStage(fullCfg);
+      applyReviewModeIfNeeded();
     } else {
       target.innerHTML = `<p style="padding:24px;">⚠️ Chưa hỗ trợ dạng câu hỏi "${questionsBlock.type}".</p>`;
     }
