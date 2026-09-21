@@ -38,6 +38,10 @@
   display: inline-block; background: var(--primary); color: #fff; font-weight: 800;
   padding: 1px 9px; border-radius: 6px; margin-right: 8px; font-size: 13px;
 }
+.vi-text {
+  display: block; font-style: italic; color: #7c7256; font-size: 13px;
+  margin: 2px 0 10px 0; padding-left: 10px; border-left: 3px solid var(--border-color);
+}
 
 /* ---------- Ghi đè footer: statusText có thể dài (vd "Đã làm 12/17 câu...")
    -> cho phép xuống dòng gọn thay vì đẩy tràn/che khuất nội dung phía trên ---------- */
@@ -133,6 +137,11 @@
   flex-shrink: 0; cursor: pointer; transition: background 0.15s;
 }
 .stage-step:hover { background: rgba(0,0,0,0.07); }
+.optional-tag {
+  font-size: 9.5px; font-weight: 700; background: rgba(0,0,0,0.08); color: inherit;
+  padding: 1px 6px; border-radius: 8px; margin-left: 2px; text-transform: uppercase;
+}
+#btnReviewExplanation { background: #4a5568; margin-right: 10px; }
 .stage-step.active { background: var(--primary); color: #fff; }
 .stage-step.done { background: rgba(0,0,0,0.03); color: var(--primary); }
 .stage-step .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
