@@ -47,6 +47,21 @@
         : "IELTS Reading (bài gốc)";
     }
 
+    // Nút "Xuất File Word" trong Teacher Toolbar: chỉ hiện khi bài này có sẵn
+    // file .docx đi kèm (field wordDocUrl trong JSON). File Word KHÔNG được
+    // tự sinh ra từ dữ liệu bài - đây là tài liệu soạn thủ công riêng, chỉ
+    // gắn link tải về tương ứng với từng bài.
+    const exportBtn = document.getElementById("btnExportWord");
+    if (exportBtn) {
+      if (examData.wordDocUrl) {
+        exportBtn.href = examData.wordDocUrl;
+        exportBtn.setAttribute("download", examData.wordDocUrl.split("/").pop());
+        exportBtn.style.display = "inline-block";
+      } else {
+        exportBtn.style.display = "none";
+      }
+    }
+
     // Áp theme Nàng Tiên 4 Mùa NGAY khi tải xong dữ liệu, TRƯỚC khi học sinh login,
     // để màn hình đăng nhập đã hiện đúng nàng tiên + màu sắc của bài này.
     const seasonTheme = getSeasonTheme(examData.season);
