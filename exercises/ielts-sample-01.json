@@ -4,6 +4,7 @@
   "season": "spring",
   "exerciseName": "IELTS Reading - Ocean Plastic Pollution",
   "webhookUrl": "YOUR_WEBHOOK_URL_HERE",
+  "wordDocUrl": "word-docs/ielts-sample-01.docx",
 
   "vocabulary": [
     { "word": "pollution", "meaning": "sự ô nhiễm", "example": "Plastic pollution is a serious problem in the ocean." },
