@@ -1,0 +1,1150 @@
+{
+  "id": "ielts-pirates-passage2",
+  "topic": "History",
+  "season": "summer",
+  "exerciseName": "IELTS Reading - The Pirates of the Ancient Mediterranean",
+  "webhookUrl": "YOUR_WEBHOOK_URL_HERE",
+  "wordDocUrl": "word-docs/ielts-pirates-passage2.docx",
+  "vocabulary": [
+    {
+      "word": "misfits",
+      "meaning": "kẻ lạc lõng, không hòa nhập",
+      "example": "People often imagine pirates as a crew of misfits and daredevils."
+    },
+    {
+      "word": "swashbucklers",
+      "meaning": "cướp biển hào hoa, ưa mạo hiểm",
+      "example": "Swashbucklers sailed the Caribbean Sea in popular stories."
+    },
+    {
+      "word": "prowl",
+      "meaning": "rình rập, lảng vảng một cách đe dọa",
+      "example": "Pirates prowled the Mediterranean for thousands of years."
+    },
+    {
+      "word": "eliminate / eradicate",
+      "meaning": "loại bỏ hoàn toàn, xóa sổ",
+      "example": "Rome finally managed to eradicate piracy from the Mediterranean."
+    },
+    {
+      "word": "predate",
+      "meaning": "có trước, xảy ra trước về thời gian",
+      "example": "Piracy probably predated the powerful Egyptian civilisation."
+    },
+    {
+      "word": "marine resources",
+      "meaning": "nguồn tài nguyên biển",
+      "example": "Coastal people relied heavily on marine resources for food."
+    },
+    {
+      "word": "unsurpassed",
+      "meaning": "không ai sánh bằng, vượt trội",
+      "example": "Local sailors had unsurpassed knowledge of the coastline."
+    },
+    {
+      "word": "coves",
+      "meaning": "vịnh nhỏ, eo biển kín",
+      "example": "Pirates hid their boats in small coves along the coast."
+    },
+    {
+      "word": "undetected",
+      "meaning": "không bị phát hiện",
+      "example": "Pirates could hide undetected until a ship passed by."
+    },
+    {
+      "word": "navigable routes",
+      "meaning": "các tuyến đường có thể đi lại được",
+      "example": "Ships had to follow a few well-known navigable routes."
+    },
+    {
+      "word": "laden with goods",
+      "meaning": "chở đầy hàng hóa",
+      "example": "A ship laden with goods could not easily escape from pirates."
+    },
+    {
+      "word": "retaliation",
+      "meaning": "sự trả đũa",
+      "example": "Local people feared retaliation from the pirates."
+    },
+    {
+      "word": "resort to",
+      "meaning": "dùng đến, nhờ cậy một biện pháp nào đó",
+      "example": "Governments sometimes resorted to using pirates during wartime."
+    },
+    {
+      "word": "disruption",
+      "meaning": "sự gián đoạn, xáo trộn",
+      "example": "Pirates caused substantial disruption to regional commerce."
+    },
+    {
+      "word": "condone",
+      "meaning": "dung túng, chấp nhận hành vi sai",
+      "example": "The Greeks did not always condone piracy."
+    },
+    {
+      "word": "curtail",
+      "meaning": "hạn chế, cắt giảm",
+      "example": "The Senate wanted to curtail future attacks on grain ships."
+    },
+    {
+      "word": "embolden",
+      "meaning": "khiến ai đó táo bạo, liều lĩnh hơn",
+      "example": "Emboldened pirates began to kidnap Roman officials."
+    },
+    {
+      "word": "ransom",
+      "meaning": "tiền chuộc",
+      "example": "Pirates demanded a ransom for the return of their prisoners."
+    }
+  ],
+  "vocabularyExercises": [
+    {
+      "type": "matching",
+      "title": "Exercise 1: Match the meaning",
+      "instructions": "Match the words with their meanings.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "to make someone feel brave enough to do something"
+        },
+        {
+          "letter": "B",
+          "text": "move around in a place, often in a threatening way"
+        },
+        {
+          "letter": "C",
+          "text": "to accept behaviour that is morally wrong"
+        },
+        {
+          "letter": "D",
+          "text": "without being noticed or seen"
+        },
+        {
+          "letter": "E",
+          "text": "people who do not fit into normal society"
+        },
+        {
+          "letter": "F",
+          "text": "exist or happen before something else in time"
+        },
+        {
+          "letter": "G",
+          "text": "better than everything or everyone else"
+        },
+        {
+          "letter": "H",
+          "text": "something that stops a process continuing normally"
+        }
+      ],
+      "items": [
+        {
+          "id": "v1_1",
+          "left": "misfits",
+          "answer": "E"
+        },
+        {
+          "id": "v1_2",
+          "left": "prowl",
+          "answer": "B"
+        },
+        {
+          "id": "v1_3",
+          "left": "predate",
+          "answer": "F"
+        },
+        {
+          "id": "v1_4",
+          "left": "unsurpassed",
+          "answer": "G"
+        },
+        {
+          "id": "v1_5",
+          "left": "undetected",
+          "answer": "D"
+        },
+        {
+          "id": "v1_6",
+          "left": "disruption",
+          "answer": "H"
+        },
+        {
+          "id": "v1_7",
+          "left": "condone",
+          "answer": "C"
+        },
+        {
+          "id": "v1_8",
+          "left": "embolden",
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "type": "fillblank",
+      "title": "Exercise 2: Vocabulary in context",
+      "instructions": "Complete the sentences with words from the box.",
+      "wordBank": [
+        "navigable",
+        "coves",
+        "laden",
+        "retaliation",
+        "resort",
+        "eradicate",
+        "curtail",
+        "ransom"
+      ],
+      "items": [
+        {
+          "id": "v2_1",
+          "sentenceHTML": "Ships had to follow certain {{blank}} routes because open-water travel was difficult before the 15th century.",
+          "answers": [
+            "navigable"
+          ]
+        },
+        {
+          "id": "v2_2",
+          "sentenceHTML": "Pirates used {{blank}} along the coastline to hide their boats.",
+          "answers": [
+            "coves"
+          ]
+        },
+        {
+          "id": "v2_3",
+          "sentenceHTML": "A slow ship {{blank}} with goods could not easily escape from pirates.",
+          "answers": [
+            "laden"
+          ]
+        },
+        {
+          "id": "v2_4",
+          "sentenceHTML": "Local people sometimes avoided helping the authorities because they feared {{blank}} from the pirates.",
+          "answers": [
+            "retaliation"
+          ]
+        },
+        {
+          "id": "v2_5",
+          "sentenceHTML": "Ancient governments sometimes had to {{blank}} to using pirates' skills during wartime.",
+          "answers": [
+            "resort"
+          ]
+        },
+        {
+          "id": "v2_6",
+          "sentenceHTML": "Rome eventually managed to {{blank}} piracy completely from the Mediterranean.",
+          "answers": [
+            "eradicate"
+          ]
+        },
+        {
+          "id": "v2_7",
+          "sentenceHTML": "The Roman Senate wanted to {{blank}} future attacks on grain ships.",
+          "answers": [
+            "curtail"
+          ]
+        },
+        {
+          "id": "v2_8",
+          "sentenceHTML": "Pirates demanded a large {{blank}} for the return of their prisoners.",
+          "answers": [
+            "ransom"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "title": "Exercise 3: Spot the IELTS paraphrase",
+      "instructions": "Match the wording in the question with the expression from the passage.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "resort to pirates' services... during wartime"
+        },
+        {
+          "letter": "B",
+          "text": "offered land in fertile areas far from the sea"
+        },
+        {
+          "letter": "C",
+          "text": "rejected Akhenaten's claims of a connection"
+        },
+        {
+          "letter": "D",
+          "text": "could not easily cross long distances over open water"
+        },
+        {
+          "letter": "E",
+          "text": "an image springs to most people's minds of a crew of misfits..."
+        },
+        {
+          "letter": "F",
+          "text": "eliminate / eradicated piracy"
+        }
+      ],
+      "items": [
+        {
+          "id": "v3_1",
+          "left": "a denial of involvement",
+          "answer": "C"
+        },
+        {
+          "id": "v3_2",
+          "left": "eradicate piracy",
+          "answer": "F"
+        },
+        {
+          "id": "v3_3",
+          "left": "commonly view pirates today",
+          "answer": "E"
+        },
+        {
+          "id": "v3_4",
+          "left": "encouraged not to return to piracy",
+          "answer": "B"
+        },
+        {
+          "id": "v3_5",
+          "left": "stay close to land",
+          "answer": "D"
+        },
+        {
+          "id": "v3_6",
+          "left": "use of pirates by states",
+          "answer": "A"
+        }
+      ]
+    }
+  ],
+  "simplifiedPassage": {
+    "title": "The Pirates of the Ancient Mediterranean (Simplified)",
+    "author": "",
+    "paragraphs": [
+      {
+        "label": "A",
+        "text": "Many people imagine pirates as wild adventurers on ships in the Caribbean Sea. But pirates were active in the Mediterranean much earlier than that, from the first millennium BCE. They attacked merchant ships and threatened important trade routes. Ancient states tried hard to stop them, but they could not. Piracy stayed a big problem for thousands of years. Only when pirates began to threaten Rome directly did Rome take action. The Roman general Pompey organised a large fleet, and Rome finally ended piracy in the Mediterranean."
+      },
+      {
+        "label": "B",
+        "text": "Piracy in the Mediterranean was first written down in ancient Egypt, during the time of Pharaoh Amenhotep III. However, piracy probably started even earlier. The Mediterranean region was important, but some areas were rugged and mountainous. People who lived there depended on the sea for food and other resources, so they had boats and strong sailing skills. Because of this, it was easy for them to become pirates. The coastline also had many small coves, so pirates could hide their boats there. Before the 15th century, ships could not travel easily across open water. Because of this, ships had to follow a few well-known routes close to the coast, and this made slow merchant ships an easy target for pirates."
+      },
+      {
+        "label": "C",
+        "text": "Sometimes, governments used pirates to help them, especially during wars. Pirates would attack first, before the government's own navy arrived. Because of this, some regions became rich by giving pirates a safe place to stay."
+      },
+      {
+        "label": "D",
+        "text": "The first written record of a named pirate group was found in the Amarna Letters. These letters were messages between the Egyptian pharaoh and other rulers. Although the Egyptian fleet tried hard to stop the pirates, the pirates still caused a lot of trouble for trade. In one letter, the king of Alashiya said his people were not connected to the pirates, and he promised to punish anyone from his country who was involved in piracy."
+      },
+      {
+        "label": "E",
+        "text": "The ancient Greeks had a different attitude towards piracy than the Egyptians did. Because the Greeks depended on the sea for almost everything, they saw pirates differently. In fact, famous Greek writers like Homer often praised pirates in their stories. Some important Greek officials even took part in piracy themselves. For example, in 355 BCE, some Athenian ambassadors stopped their official journey to capture a ship and take goods from it for themselves. Although the Greeks did not always accept piracy, there were too many pirates for the government to stop."
+      },
+      {
+        "label": "F",
+        "text": "As Rome became more powerful, it had to deal with piracy too. Piracy caused problems for Rome, but it also brought benefits, so Rome did not always fight against it. For example, pirates provided slaves for Roman farms and mines. However, when pirates attacked ships carrying grain to Rome, people in the Senate became angry and demanded punishment. Rome did not act quickly, so piracy continued. By the 1st century BCE, pirates became bold enough to kidnap important Roman officials and demand a ransom. The most famous hostage was Julius Caesar, who was captured in 75 BCE."
+      },
+      {
+        "label": "G",
+        "text": "By this time, Rome understood that piracy could not continue. In 67 BCE, a new law gave Pompey control of a large fleet. He divided the Mediterranean into 13 areas, and each area had its own commander. His forces cleared the pirates from one area before moving to the next. Eventually, the whole Mediterranean was free of pirates. Although thousands of pirates were killed, many others were given farmland far from the sea. In this way, Rome turned a dangerous problem into a benefit for its economy."
+      }
+    ]
+  },
+  "simplifiedQuestions": {
+    "type": "combo",
+    "blocks": [
+      {
+        "type": "matching",
+        "title": "Step 1: Find the paragraph",
+        "instructions": "Find the paragraph which gives information about each topic below.",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Paragraph A"
+          },
+          {
+            "letter": "B",
+            "text": "Paragraph B"
+          },
+          {
+            "letter": "C",
+            "text": "Paragraph C"
+          },
+          {
+            "letter": "D",
+            "text": "Paragraph D"
+          },
+          {
+            "letter": "E",
+            "text": "Paragraph E"
+          },
+          {
+            "letter": "F",
+            "text": "Paragraph F"
+          },
+          {
+            "letter": "G",
+            "text": "Paragraph G"
+          }
+        ],
+        "items": [
+          {
+            "id": "s1_1",
+            "left": "pirates hiding their boats along the coast",
+            "answer": "B"
+          },
+          {
+            "id": "s1_2",
+            "left": "how Pompey organised his fleet against pirates",
+            "answer": "G"
+          },
+          {
+            "id": "s1_3",
+            "left": "why governments sometimes used pirates",
+            "answer": "C"
+          },
+          {
+            "id": "s1_4",
+            "left": "the common (modern) image of pirates",
+            "answer": "A"
+          },
+          {
+            "id": "s1_5",
+            "left": "a leader denying a connection with pirates",
+            "answer": "D"
+          },
+          {
+            "id": "s1_6",
+            "left": "a reason why ships had to sail close to the coast",
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "title": "Step 2: TRUE or FALSE first",
+        "instructions": "Before adding NOT GIVEN, practise the two easier relationships: SAME information → TRUE, OPPOSITE information → FALSE.",
+        "items": [
+          {
+            "id": "s2_1",
+            "question": "Rome ended piracy as soon as it started to grow in the Mediterranean.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              }
+            ],
+            "answer": "FALSE"
+          },
+          {
+            "id": "s2_2",
+            "question": "People in rugged coastal areas often had good sailing skills.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              }
+            ],
+            "answer": "TRUE"
+          },
+          {
+            "id": "s2_3",
+            "question": "Ships could easily sail long distances across open water before the 15th century.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              }
+            ],
+            "answer": "FALSE"
+          },
+          {
+            "id": "s2_4",
+            "question": "The ancient Greeks always disapproved of piracy.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              }
+            ],
+            "answer": "FALSE"
+          },
+          {
+            "id": "s2_5",
+            "question": "Pirates once captured Julius Caesar and demanded money for his release.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              }
+            ],
+            "answer": "TRUE"
+          },
+          {
+            "id": "s2_6",
+            "question": "Pompey killed every single pirate in the Mediterranean.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              }
+            ],
+            "answer": "FALSE"
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "title": "Step 3: Add NOT GIVEN",
+        "instructions": "TRUE = same as passage. FALSE = opposite of passage. NOT GIVEN = passage does not say.",
+        "items": [
+          {
+            "id": "s3_1",
+            "question": "The Egyptian pharaoh personally sailed out to fight the pirates.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              },
+              {
+                "letter": "NOT GIVEN",
+                "text": "NOT GIVEN"
+              }
+            ],
+            "answer": "NOT GIVEN"
+          },
+          {
+            "id": "s3_2",
+            "question": "The king of Alashiya offered to punish any of his people involved in piracy.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              },
+              {
+                "letter": "NOT GIVEN",
+                "text": "NOT GIVEN"
+              }
+            ],
+            "answer": "TRUE"
+          },
+          {
+            "id": "s3_3",
+            "question": "Athenian officials once stole goods from a captured ship.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              },
+              {
+                "letter": "NOT GIVEN",
+                "text": "NOT GIVEN"
+              }
+            ],
+            "answer": "TRUE"
+          },
+          {
+            "id": "s3_4",
+            "question": "Rome received no benefit at all from piracy.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              },
+              {
+                "letter": "NOT GIVEN",
+                "text": "NOT GIVEN"
+              }
+            ],
+            "answer": "FALSE"
+          },
+          {
+            "id": "s3_5",
+            "question": "Every pirate killed by Pompey's forces was immediately replaced by a new pirate.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              },
+              {
+                "letter": "NOT GIVEN",
+                "text": "NOT GIVEN"
+              }
+            ],
+            "answer": "NOT GIVEN"
+          },
+          {
+            "id": "s3_6",
+            "question": "Pompey's campaign against piracy lasted less than a year.",
+            "options": [
+              {
+                "letter": "TRUE",
+                "text": "TRUE"
+              },
+              {
+                "letter": "FALSE",
+                "text": "FALSE"
+              },
+              {
+                "letter": "NOT GIVEN",
+                "text": "NOT GIVEN"
+              }
+            ],
+            "answer": "NOT GIVEN"
+          }
+        ]
+      },
+      {
+        "type": "mcq",
+        "title": "Step 4: Choose the correct answer",
+        "instructions": "In the real test, you will choose TWO correct answers. Here, practise with ONE first.",
+        "items": [
+          {
+            "id": "s4_1",
+            "question": "Which is true about people living in rugged coastal areas of the ancient Mediterranean?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "They had little knowledge of the sea."
+              },
+              {
+                "letter": "B",
+                "text": "They often had strong sailing skills."
+              },
+              {
+                "letter": "C",
+                "text": "They avoided the coast completely."
+              },
+              {
+                "letter": "D",
+                "text": "They worked mainly in farming."
+              }
+            ],
+            "answer": "B"
+          },
+          {
+            "id": "s4_2",
+            "question": "Which is true about the ancient Greeks and piracy?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "All Greek citizens strongly opposed piracy."
+              },
+              {
+                "letter": "B",
+                "text": "Some important officials took part in piracy."
+              },
+              {
+                "letter": "C",
+                "text": "Piracy stopped completely after Homer's time."
+              },
+              {
+                "letter": "D",
+                "text": "The government successfully ended piracy."
+              }
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "type": "fillblank",
+        "title": "Step 5: Complete the summary",
+        "instructions": "Choose ONE word from the box for each answer.",
+        "wordBank": [
+          "slaves",
+          "grain",
+          "officials",
+          "weapons",
+          "soldiers"
+        ],
+        "items": [
+          {
+            "id": "s5_1",
+            "sentenceHTML": "Pirates supplied {{blank}} for Roman farms and mines.",
+            "answers": [
+              "slaves"
+            ]
+          },
+          {
+            "id": "s5_2",
+            "sentenceHTML": "When pirates attacked ships carrying {{blank}} to Rome, the Senate became angry.",
+            "answers": [
+              "grain"
+            ]
+          },
+          {
+            "id": "s5_3",
+            "sentenceHTML": "Pirates became bold enough to kidnap Roman {{blank}} and ask for money.",
+            "answers": [
+              "officials"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "originalPassage": {
+    "title": "The pirates of the ancient Mediterranean",
+    "author": "In the first and second millennia BCE, pirates sailed around the Mediterranean, attacking ships and avoiding pursuers",
+    "paragraphs": [
+      {
+        "label": "A",
+        "text": "When one mentions pirates, an image springs to most people's minds of a crew of misfits, daredevils and adventurers in command of a tall sailing ship in the Caribbean Sea. Yet from the first to the third millennium BCE, thousands of years before these swashbucklers began spreading fear across the Caribbean, pirates prowled the Mediterranean, raiding merchant ships and threatening vital trade routes. However, despite all efforts and the might of various ancient states, piracy could not be stopped. The situation remained unchanged for thousands of years. Only when the pirates directly threatened the interests of ancient Rome did the Roman Republic organise a massive fleet to eliminate piracy. Under the command of the Roman general Pompey, Rome eradicated piracy, transforming the Mediterranean into 'Mare Nostrum' (Our Sea)."
+      },
+      {
+        "label": "B",
+        "text": "Although piracy in the Mediterranean is first recorded in ancient Egypt during the reign of Pharaoh Amenhotep III (c 1390-1353 BCE), it is reasonable to assume it predated this powerful civilisation. This is partly due to the great importance the Mediterranean held at this time, and partly due to its geography. While the Mediterranean region is predominantly fertile, some parts are rugged and hilly, even mountainous. In the ancient times, the inhabitants of these areas relied heavily on marine resources, including fish and salt. Most had their own boats, possessed good seafaring skills, and unsurpassed knowledge of the local coastline and sailing routes. Thus, it is not surprising that during hardships, these men turned to piracy. Geography itself further benefited the pirates, with the numerous coves along the coast providing places for them to hide their boats and strike undetected. Before the invention of ocean-going caravels in the 15th century, ships could not easily cross long distances over open water. Thus, in the ancient world most ships were restricted to a few well-known navigable routes that followed the coastline. Caught in a trap, a slow merchant ship laden with goods had no other option but to surrender. In addition, knowledge of the local area helped the pirates to avoid retaliation once a state fleet arrived."
+      },
+      {
+        "label": "C",
+        "text": "One should also add that it was not unknown in the first and second millennia BCE for governments to resort to pirates' services, especially during wartime, employing their skills and numbers against their opponents. A pirate fleet would serve in the first wave of attack, preparing the way for the navy. Some of the regions were known for providing safe harbours to pirates, who, in return, boosted the local economy."
+      },
+      {
+        "label": "D",
+        "text": "The first known record of a named group of Mediterranean pirates, made during the rule of ancient Egyptian Pharaoh Akhenaten (c 1353-1336 BCE), was in the Amarna Letters. These were extracts of diplomatic correspondence between the pharaoh and his allies, and covered many pressing issues, including piracy. It seems the pharaoh was troubled by two distinct pirate groups, the Lukka and the Sherden. Despite the Egyptian fleet's best efforts, the pirates continued to cause substantial disruption to regional commerce. In the letters, the king of Alashiya (modern Cyprus) rejected Akhenaten's claims of a connection with the Lukka (based in modern-day Turkey). The king assured Akhenaten he was prepared to punish any of his subjects involved in piracy."
+      },
+      {
+        "label": "E",
+        "text": "The ancient Greek world's experience of piracy was different from that of Egyptian rulers. While Egypt's power was land-based, the ancient Greeks relied on the Mediterranean in almost all aspects of life, from trade to warfare. Interestingly, in his works the Iliad and the Odyssey, the ancient Greek writer Homer not only condones, but praises the lifestyle and actions of pirates. The opinion remained unchanged in the following centuries. The ancient Greek historian Thucydides, for instance, glorified pirates' daring attacks on ships or even cities. For Greeks, piracy was a part of everyday life. Even high-ranking members of the state were not beyond engaging in such activities. According to the Greek orator Demosthenes, in 355 BCE, Athenian ambassadors made a detour from their official travel to capture a ship sailing from Egypt, taking the wealth found onboard for themselves! The Greeks' liberal approach towards piracy does not mean they always tolerated it, but attempts to curtail piracy were hampered by the large number of pirates operating in the Mediterranean."
+      },
+      {
+        "label": "F",
+        "text": "The rising power of ancient Rome required the Roman Republic to deal with piracy in the Mediterranean. While piracy was a serious issue for the Republic, Rome profited greatly from its existence. Pirate raids provided a steady source of slaves, essential for Rome's agriculture and mining industries. But this arrangement could work only while the pirates left Roman interests alone. Pirate attacks on grain ships, which were essential to Roman citizens, led to angry voices in the Senate, demanding punishment of the culprits. Rome, however, did nothing, further encouraging piracy. By the 1st century BCE, emboldened pirates kidnapped prominent Roman dignitaries, asking for a large ransom to be paid. Their most famous hostage was none other than Julius Caesar, captured in 75 BCE."
+      },
+      {
+        "label": "G",
+        "text": "By now, Rome was well aware that pirates had outlived their usefulness. The time had come for concerted action. In 67 BCE, a new law granted vast funds to Pompey to combat the Mediterranean menace. Taking personal command, Pompey divided the entire Mediterranean into 13 districts, assigning a fleet and commander to each. After cleansing one district of pirates, the fleet would join another in the next district. The process continued until the entire Mediterranean was free of pirates. Although thousands of pirates died at the hands of Pompey's troops, as a long-term solution to the problem, many more were offered land in fertile areas located far from the sea. Instead of a maritime menace, Rome got productive farmers that further boosted its economy."
+      }
+    ]
+  },
+  "originalQuestions": {
+    "type": "combo",
+    "blocks": [
+      {
+        "type": "matching",
+        "title": "Questions 14-19: Which paragraph contains the following information?",
+        "instructions": "Reading Passage has seven paragraphs, A-G. NB You may use any letter more than once.",
+        "options": [
+          {
+            "letter": "A",
+            "text": "Paragraph A"
+          },
+          {
+            "letter": "B",
+            "text": "Paragraph B"
+          },
+          {
+            "letter": "C",
+            "text": "Paragraph C"
+          },
+          {
+            "letter": "D",
+            "text": "Paragraph D"
+          },
+          {
+            "letter": "E",
+            "text": "Paragraph E"
+          },
+          {
+            "letter": "F",
+            "text": "Paragraph F"
+          },
+          {
+            "letter": "G",
+            "text": "Paragraph G"
+          }
+        ],
+        "items": [
+          {
+            "id": "o14",
+            "left": "14. a reference to a denial of involvement in piracy",
+            "answer": "D"
+          },
+          {
+            "id": "o15",
+            "left": "15. details of how a campaign to eradicate piracy was carried out",
+            "answer": "G"
+          },
+          {
+            "id": "o16",
+            "left": "16. a mention of the circumstances in which states in the ancient world would make use of pirates",
+            "answer": "C"
+          },
+          {
+            "id": "o17",
+            "left": "17. a reference to how people today commonly view pirates",
+            "answer": "A"
+          },
+          {
+            "id": "o18",
+            "left": "18. an explanation of how some people were encouraged not to return to piracy",
+            "answer": "G"
+          },
+          {
+            "id": "o19",
+            "left": "19. a mention of the need for many sailing vessels to stay relatively close to land",
+            "answer": "B"
+          }
+        ]
+      },
+      {
+        "type": "mcq-multi",
+        "title": "Questions 20 and 21",
+        "instructions": "Choose TWO letters, A-E. Which TWO of the following statements does the writer make about inhabitants of the Mediterranean region in the ancient world?",
+        "items": [
+          {
+            "id": "o20_21",
+            "question": "Which TWO of the following statements does the writer make about inhabitants of the Mediterranean region in the ancient world?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "They often used stolen vessels to carry out pirate attacks."
+              },
+              {
+                "letter": "B",
+                "text": "They managed to escape capture by the authorities because they knew the area so well."
+              },
+              {
+                "letter": "C",
+                "text": "They paid for information about the routes merchant ships would take."
+              },
+              {
+                "letter": "D",
+                "text": "They depended more on the sea for their livelihood than on farming."
+              },
+              {
+                "letter": "E",
+                "text": "They stored many of the goods taken in pirate attacks in coves along the coastline."
+              }
+            ],
+            "answers": [
+              "B",
+              "D"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "mcq-multi",
+        "title": "Questions 22 and 23",
+        "instructions": "Choose TWO letters, A-E. Which TWO of the following statements does the writer make about piracy and ancient Greece?",
+        "items": [
+          {
+            "id": "o22_23",
+            "question": "Which TWO of the following statements does the writer make about piracy and ancient Greece?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "The state estimated that very few people were involved in piracy."
+              },
+              {
+                "letter": "B",
+                "text": "Attitudes towards piracy changed shortly after the Iliad and the Odyssey were written."
+              },
+              {
+                "letter": "C",
+                "text": "Important officials were known to occasionally take part in piracy."
+              },
+              {
+                "letter": "D",
+                "text": "Every citizen regarded pirate attacks on cities as unacceptable."
+              },
+              {
+                "letter": "E",
+                "text": "A favourable view of piracy is evident in certain ancient Greek texts."
+              }
+            ],
+            "answers": [
+              "C",
+              "E"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "fillblank",
+        "title": "Questions 24-26: Complete the summary",
+        "instructions": "Choose ONE WORD ONLY from the passage for each answer.",
+        "items": [
+          {
+            "id": "o24",
+            "sentenceHTML": "Attacks on vessels transporting {{blank}} to Rome resulted in calls for punishment.",
+            "answers": [
+              "grain"
+            ]
+          },
+          {
+            "id": "o25",
+            "sentenceHTML": "There were calls for {{blank}} for the pirates responsible for these attacks.",
+            "answers": [
+              "punishment"
+            ]
+          },
+          {
+            "id": "o26",
+            "sentenceHTML": "Some pirates demanded a {{blank}} for the return of the Roman officials they captured.",
+            "answers": [
+              "ransom"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "grammarTools": [
+    {
+      "title": "Grammar Tool 1: Concession clauses (although / despite)",
+      "staticIntroHTML": "<p><b>Step 1: Look at the passage</b></p><p><i>“Despite the Egyptian fleet's best efforts, the pirates continued to cause substantial disruption to regional commerce.”</i></p><p><i>“Although piracy was a serious issue for the Republic, Rome profited greatly from its existence.”</i></p><p><b>Step 2: Notice</b></p><p>What does 'although / despite' tell the reader? → the second part of the sentence is surprising, or opposite to what we would expect.</p>",
+      "patternExercise": {
+        "type": "fillblank",
+        "title": "Step 3: Discover the pattern",
+        "instructions": "Complete the sentence.",
+        "items": [
+          {
+            "id": "g1_p1",
+            "sentenceHTML": "After although / despite, we usually expect one result — but the rest of the sentence gives a {{blank}} (surprising / opposite) result.",
+            "answers": [
+              "surprising",
+              "opposite"
+            ]
+          }
+        ]
+      },
+      "staticReadingToolHTML": "<p><b>Step 4: Use it as a READING TOOL</b></p><p>When you see 'although' or 'despite', expect two opposite ideas. The MAIN message is usually the part after the comma.</p><p>Example: “Although piracy was a serious issue for the Republic, Rome profited greatly from its existence.”</p><p><b>Core meaning: Rome profited from piracy.</b></p>",
+      "applyExercise": {
+        "type": "mcq",
+        "title": "Exercise: Apply",
+        "instructions": "Choose the correct meaning.",
+        "items": [
+          {
+            "id": "g1_e1",
+            "question": "“Despite the Egyptian fleet's best efforts, the pirates continued to cause substantial disruption to regional commerce.” — Is the statement 'The Egyptian fleet successfully stopped the pirates' TRUE or FALSE?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "TRUE"
+              },
+              {
+                "letter": "B",
+                "text": "FALSE"
+              },
+              {
+                "letter": "C",
+                "text": "NOT GIVEN"
+              }
+            ],
+            "answer": "B"
+          },
+          {
+            "id": "g1_e2",
+            "question": "“Although thousands of pirates died at the hands of Pompey's troops, many more were offered land in fertile areas.” — What is the MAIN message?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "Most pirates were killed by Pompey's troops."
+              },
+              {
+                "letter": "B",
+                "text": "Many pirates were given land instead of being killed."
+              },
+              {
+                "letter": "C",
+                "text": "Pompey's troops refused to fight the pirates."
+              },
+              {
+                "letter": "D",
+                "text": "The pirates killed Pompey's troops."
+              }
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      "staticReturnHTML": "<p><b>Step 5: Return to the IELTS task</b></p><p>Passage idea: “Despite the Egyptian fleet's best efforts, the pirates continued to cause substantial disruption.”</p><p>Question idea: The Egyptian fleet successfully stopped the pirates.</p><p><b>The meanings are opposite → FALSE.</b></p>"
+    },
+    {
+      "title": "Grammar Tool 2: Participle clauses",
+      "staticIntroHTML": "<p><b>Step 1: Look at the passage</b></p><p><i>“Caught in a trap, a slow merchant ship had no other option but to surrender.”</i></p><p><i>“Taking personal command, Pompey divided the entire Mediterranean into 13 districts.”</i></p><p><i>“Emboldened pirates kidnapped prominent Roman dignitaries.”</i></p><p><b>Step 2: Notice</b></p><p>Who/what is 'caught in a trap'? → the merchant ship (something HAPPENED TO it). Who 'took personal command'? → Pompey (HE performed the action).</p>",
+      "patternExercise": {
+        "type": "fillblank",
+        "title": "Step 3: Discover the pattern",
+        "instructions": "Complete the sentence.",
+        "items": [
+          {
+            "id": "g2_p1",
+            "sentenceHTML": "A participle clause is a shortened way of writing a clause with because/when/as. It does not have its own {{blank}} — it shares the subject of the main clause.",
+            "answers": [
+              "subject"
+            ]
+          }
+        ]
+      },
+      "staticReadingToolHTML": "<p><b>Step 4: Use it as a READING TOOL</b></p><p>Expand the participle clause into a full clause to understand the meaning clearly.</p><p>Example: “Caught in a trap, a slow merchant ship had no other option but to surrender.”</p><p><b>Expanded: Because the merchant ship was caught in a trap, it had no other option but to surrender.</b></p>",
+      "applyExercise": {
+        "type": "mcq",
+        "title": "Exercise: Apply",
+        "instructions": "Choose the correct meaning.",
+        "items": [
+          {
+            "id": "g2_e1",
+            "question": "“Taking personal command, Pompey divided the entire Mediterranean into 13 districts.” — What is the simple meaning?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "Someone else divided the Mediterranean, not Pompey."
+              },
+              {
+                "letter": "B",
+                "text": "Pompey personally led the campaign and divided the Mediterranean himself."
+              },
+              {
+                "letter": "C",
+                "text": "Pompey refused to take command."
+              },
+              {
+                "letter": "D",
+                "text": "The Mediterranean was never divided."
+              }
+            ],
+            "answer": "B"
+          },
+          {
+            "id": "g2_e2",
+            "question": "“Emboldened pirates kidnapped prominent Roman dignitaries.” — What does 'emboldened' explain?",
+            "options": [
+              {
+                "letter": "A",
+                "text": "Why the pirates felt confident enough to kidnap officials."
+              },
+              {
+                "letter": "B",
+                "text": "The location where the kidnapping happened."
+              },
+              {
+                "letter": "C",
+                "text": "How much ransom was paid."
+              },
+              {
+                "letter": "D",
+                "text": "The number of pirates involved."
+              }
+            ],
+            "answer": "A"
+          }
+        ]
+      },
+      "staticReturnHTML": "<p><b>Step 5: Return to the IELTS task</b></p><p>Passage idea: “Taking personal command, Pompey divided the entire Mediterranean into 13 districts, assigning a fleet and commander to each.”</p><p>This sentence explains exactly HOW Pompey carried out his campaign — useful for a question about 'details of how a campaign to eradicate piracy was carried out'.</p>"
+    }
+  ],
+  "explanation": {
+    "simplified": [
+      {
+        "q": "s1_1-s1_6",
+        "ans": "-",
+        "key": "Xem đáp án Step 1-5 ở bảng đáp án cuối bài (đáp án phụ thuộc dạng bài, không tổng hợp chung 1 bảng)."
+      }
+    ],
+    "original": [
+      {
+        "q": 14,
+        "ans": "D",
+        "key": "'the king of Alashiya rejected Akhenaten's claims of a connection with the Lukka' - đây là lời phủ nhận liên quan đến cướp biển."
+      },
+      {
+        "q": 15,
+        "ans": "G",
+        "key": "'Taking personal command, Pompey divided the entire Mediterranean into 13 districts' - mô tả chi tiết cách chiến dịch được thực hiện."
+      },
+      {
+        "q": 16,
+        "ans": "C",
+        "key": "'it was not unknown... for governments to resort to pirates' services, especially during wartime' - hoàn cảnh nhà nước dùng cướp biển."
+      },
+      {
+        "q": 17,
+        "ans": "A",
+        "key": "'an image springs to most people's minds of a crew of misfits, daredevils and adventurers' - hình ảnh cướp biển trong mắt người hiện đại."
+      },
+      {
+        "q": 18,
+        "ans": "G",
+        "key": "'many more were offered land in fertile areas located far from the sea' - giải pháp khuyến khích cướp biển không quay lại nghề cũ."
+      },
+      {
+        "q": 19,
+        "ans": "B",
+        "key": "'ships could not easily cross long distances over open water... most ships were restricted to a few well-known navigable routes' - tàu phải đi gần bờ."
+      },
+      {
+        "q": "20&21",
+        "ans": "B, D",
+        "key": "B: 'they knew the area so well' liên hệ 'unsurpassed knowledge of the local coastline'. D: 'depended more on the sea' liên hệ 'relied heavily on marine resources'."
+      },
+      {
+        "q": "22&23",
+        "ans": "C, E",
+        "key": "C: 'high-ranking members of the state were not beyond engaging in such activities'. E: Homer 'not only condones, but praises the lifestyle and actions of pirates'."
+      },
+      {
+        "q": 24,
+        "ans": "grain",
+        "key": "'Pirate attacks on grain ships... led to angry voices in the Senate'."
+      },
+      {
+        "q": 25,
+        "ans": "punishment",
+        "key": "'...demanding punishment of the culprits'."
+      },
+      {
+        "q": 26,
+        "ans": "ransom",
+        "key": "'emboldened pirates kidnapped prominent Roman dignitaries, asking for a large ransom to be paid'."
+      }
+    ]
+  }
+}
